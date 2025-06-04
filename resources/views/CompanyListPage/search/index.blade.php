@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.css" />
+    <link rel="stylesheet" href="{{ asset("/./assets/css/style.css") }}" />
+    <title>Search</title>
+</head>
+
+<body>
+    <header>
+        <div class="menu_part">
+            <div class="topBar">
+                <div class="site_name flex j-c a-c">
+                    <p>
+                        大阪府 兵庫県 奈良県 で 注文住宅
+                        を建てるなら株式会社桝田工務店【イエタッタ】
+                    </p>
+                </div>
+                <div class="num_s flex j-c">
+                    <div class="container flex a-c j-b">
+                        <div class="num flex a-c">
+                            <div class="data flex a-b">
+                                <p>住宅会社</p>
+                                <p>352</p>
+                                <p>社</p>
+                            </div>
+                            <div class="data flex a-b">
+                                <p>施工事例</p>
+                                <p>689</p>
+                                <p>社</p>
+                            </div>
+                            <div class="data flex a-b">
+                                <p>モデルハウス</p>
+                                <p>112</p>
+                                <p>社</p>
+                            </div>
+                            <div class="data flex a-b">
+                                <p>土地・建売</p>
+                                <p>156</p>
+                                <p>社</p>
+                            </div>
+                        </div>
+                        <div class="search_c flex a-c">
+                            <button class="s_btn" id="reqInfo">まとめて資料請求する</button>
+                            <div class="search flex a-c">
+                                <input type="text" placeholder="会社名やキーワードで検索" />
+                                <button class="sBtn" id="sBtn">
+                                    <img src="{{ asset("/./assets/img/search_icon.png") }}" alt="" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menuBar flex col a-c j-c">
+                <div class="container">
+                    <div class="t_part flex j-c a-c">
+                        <div class="ribbon flex col a-c">
+                            <img src="{{ asset("/./assets/img/heart_noti.png") }}" class="heart" alt="heart" />
+                            <div class="count">0 件</div>
+                            <div class="label">お気に入り</div>
+                        </div>
+                        <div class="ribbonSp">
+                            <div class="ribbonSpimg">
+                                <div class="noti">126</div>
+                            </div>
+                            <p>お気に入り</p>
+                        </div>
+                        <img src="{{ asset("/./assets/img/title.png") }}" class="title" alt="title" />
+                        <div class="hamburger" onclick="toggleMenu()">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <!-- Sliding Menu -->
+                        <div class="ham_menu" id="ham_menu">
+                            <button class="close-btn" onclick="toggleMenu()">×</button>
+                            <div class="menu-items flex col">
+                                <a href="{{ url("#") }}"> 工務店・ハウスメーカーを探す </a>
+                                <a href="{{ url("#") }}">施工事例を見る</a>
+                                <a href="{{ url("#") }}">住宅イベントに行く</a>
+                                <a href="{{ url("#") }}">モデルハウスを見る</a>
+                                <a href="{{ url("#") }}"> リノベーション・リフォーム事例を見る </a>
+                                <a href="{{ url("#") }}">土地・建売・投資用物件を探す</a>
+                                <a href="{{ url("#") }}">家づくりコラム</a>
+                                <a href="{{ url("#") }}">家作り基礎講座</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu_list flex j-b">
+                        <a href="{{ url("#") }}" class="menu flex j-c a-c">
+                            工務店・ハウス<br />メーカーを探す
+                        </a>
+                        <a href="{{ url("#") }}" class="menu flex col j-c a-c">施工事例を<br />見る</a>
+                        <a href="{{ url("#") }}" class="menu flex col j-c a-c">住宅イベントに<br />行く</a>
+                        <a href="{{ url("#") }}" class="menu flex col j-c a-c">モデルハウスを<br />見る</a>
+                        <a href="{{ url("#") }}" class="menu flex col j-c a-c">
+                            リノベーション・<br />リフォーム事例を見る
+                        </a>
+                        <a href="{{ url("#") }}" class="menu flex col j-c a-c">土地・建売・<br />投資用物件を探す</a>
+                        <a href="{{ url("#") }}" class="menu flex col j-c a-c">家づくりコラム</a>
+                        <a href="{{ url("#") }}" class="menu flex col j-c a-c">家作り基礎講座</a>
+                    </div>
+                    <div class="ad">
+                        <div class="sideBar">新築・注文住宅サイト イエタッタ</div>
+                        <img src="{{ asset("/./assets/img/ad1.png") }}" class="ad_img" alt="" />
+                        <a href="{{ url("#") }}" class="ad_more flex a-c">
+                            <p>詳しくはこちら</p>
+                            <img src="{{ asset("/./assets/img/ad_more.png") }}" alt="more" />
+                        </a>
+                    </div>
+                    <img src="{{ asset("/./assets/img/ad_sp.png") }}" class="adSp" alt="adSp" />
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <img src="{{ asset("/./assets/img/closeBtn.png") }}" class="closeBtn" alt="closeBtn" />
+            <div class="searchT flex col a-c j-c">
+                <p>石川県の工務店・住宅メーカーを探す</p>
+                <p>こだわりを教えてください。</p>
+            </div>
+            <div class="search-container">
+                <div class="search-box">
+                    <img src="{{ asset("/./assets/img/search_i.png") }}" alt="検索アイコン" class="icon search-icon" />
+                    <input type="text" placeholder="エリアや会社名など入力" />
+                </div>
+                <div class="filter-container">
+                    <div class="sort-options">
+                        <span class="active">施工可能エリア</span> |
+                        <span>会社所在地</span> |
+                    </div>
+                    <button class="filter-button">
+                        <img src="{{ asset("/./assets/img/filter.png") }}" alt="絞り込みアイコン" class="" />
+                        絞り込み
+                    </button>
+                </div>
+            </div>
+            <form id="filterForm">
+                <section class="spN">
+                    <div class="sectionT">
+                        <p>施工可能エリアから探す</p>
+                    </div>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="area" value="加賀市" />加賀市</label>
+                        <label><input type="checkbox" name="area" value="白山市" />白山市</label>
+                        <label><input type="checkbox" name="area" value="小松市" />小松市</label>
+                        <label><input type="checkbox" name="area" value="野々市市" />野々市市</label>
+                        <label><input type="checkbox" name="area" value="能美市・川北町" />能美市・川北町</label>
+                        <label><input type="checkbox" name="area" value="金沢市" />金沢市</label>
+                        <label><input type="checkbox" name="area" value="小松・白山・内灘町・津幡町" />小松・白山・内灘町・津幡町</label>
+                        <label><input type="checkbox" name="area" value="鶴来市・穴水町・能登町" />鶴来市・穴水町・能登町</label>
+                        <label><input type="checkbox" name="area" value="羽咋市・宝達志水町・志賀町" />羽咋市・宝達志水町・志賀町</label>
+                        <label><input type="checkbox" name="area" value="七尾市・中能登町" />七尾市・中能登町</label>
+                        <label><input type="checkbox" name="area" value="珠洲市" />珠洲市</label>
+                        <label><input type="checkbox" name="area" value="石川県全域" />石川県全域</label>
+                        <label><input type="checkbox" name="area" value="県外" />県外</label>
+                    </div>
+                </section>
+                <section class="spN">
+                    <div class="sectionT">
+                        <p>会社所在地から探す</p>
+                    </div>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="company_location" value="加賀市" />加賀市</label>
+                        <label><input type="checkbox" name="company_location" value="白山市" />白山市</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />小松市</label>
+                        <label><input type="checkbox" name="company_location" value="野々市市" />野々市市</label>
+                        <label><input type="checkbox" name="company_location" value="能美市・川北町" />能美市・川北町</label>
+                        <label><input type="checkbox" name="company_location" value="金沢市" />金沢市</label>
+                        <label><input type="checkbox" name="company_location"
+                                value="小松・白山・内灘町・津幡町" />小松・白山・内灘町・津幡町</label>
+                        <label><input type="checkbox" name="company_location" value="鶴来市・穴水町・能登町" />鶴来市・穴水町・能登町</label>
+                        <label><input type="checkbox" name="company_location"
+                                value="羽咋市・宝達志水町・志賀町" />羽咋市・宝達志水町・志賀町</label>
+                        <label><input type="checkbox" name="company_location" value="七尾市・中能登町" />七尾市・中能登町</label>
+                        <label><input type="checkbox" name="company_location" value="珠洲市" />珠洲市</label>
+                        <label><input type="checkbox" name="company_location" value="県外" />県外</label>
+                    </div>
+                </section>
+                <section class="rangeBar">
+                    <div class="sectionT">
+                        <p>予算から探す</p>
+                    </div>
+                    <div class="range-wrapper">
+                        <div class="range-track"></div>
+                        <div class="range-active" id="budgetTrack"></div>
+                        <input type="range" id="budgetMin" min="0" max="13" step="1" value="3" />
+                        <input type="range" id="budgetMax" min="0" max="13" step="1" value="8" />
+                        <div class="value-label" id="budgetMinLabel">▼ 下限なし</div>
+                        <div class="value-label" id="budgetMaxLabel">上限なし</div>
+                    </div>
+                </section>
+                <section class="rangeBar">
+                    <div class="sectionT">
+                        <p>坪単価から探す</p>
+                    </div>
+                    <div class="range-wrapper">
+                        <div class="range-track"></div>
+                        <div class="range-active" id="unitTrack"></div>
+                        <input type="range" id="unitMin" min="0" max="8" step="1" value="2" />
+                        <input type="range" id="unitMax" min="0" max="8" step="1" value="5" />
+                        <div class="value-label" id="unitMinLabel">▼ 下限なし</div>
+                        <div class="value-label" id="unitMaxLabel">上限なし</div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sectionT flex a-c">
+                        <p>取扱住宅 から探す</p>
+                        <img src="{{ asset("/./assets/img/huh.png") }}" alt="huh?" />
+                    </div>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="company_location" value="加賀市" />注文住宅</label>
+                        <label><input type="checkbox" name="company_location" value="白山市" />規格住宅</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />建売住宅</label>
+                        <label><input type="checkbox" name="company_location" value="野々市市" />リフォーム・リノベーション</label>
+                    </div>
+                </section>
+                <section>
+                    <div class="sectionT flex a-c">
+                        <p>会社種別から探す</p>
+                        <img src="{{ asset("/./assets/img/huh.png") }}" alt="huh?" />
+                    </div>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="company_location" value="加賀市" />工務店（年間1〜19棟）</label>
+                        <label><input type="checkbox" name="company_location" value="白山市" />ハウスメーカー（年間20〜199棟）</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />大手ハウスメーカー（年間200棟〜）</label>
+                        <label><input type="checkbox" name="company_location"
+                                value="野々市市" />設計事務所（設計事務所登録をしている場合）</label>
+                    </div>
+                </section>
+                <section>
+                    <div class="sectionT flex a-c">
+                        <p>実績が多い耐震等級から探す</p>
+                        <img src="{{ asset("/./assets/img/huh.png") }}" alt="huh?" />
+                    </div>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="company_location" value="加賀市" />耐震等級1</label>
+                        <label><input type="checkbox" name="company_location" value="白山市" />耐震等級2</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />耐震等級3</label>
+                    </div>
+                </section>
+                <section>
+                    <div class="sectionT flex a-c">
+                        <p>実績が多い断熱・省エネ性能から探す</p>
+                        <img src="{{ asset("/./assets/img/huh.png") }}" alt="huh?" />
+                    </div>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="company_location" value="加賀市" />断熱等級4</label>
+                        <label><input type="checkbox" name="company_location" value="白山市" />断熱等級5 ZEH基準</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />HEAT20 G1</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />断熱等級6 HEAT20 G2</label>
+                    </div>
+                </section>
+                <section>
+                    <div class="sectionT flex a-c">
+                        <p>取扱工法から探す</p>
+                    </div>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="company_location" value="加賀市" />木造軸組</label>
+                        <label><input type="checkbox" name="company_location" value="白山市" />2×4、2×6</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />軽量鉄骨</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />重量鉄骨</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />鉄骨系プレハブ</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />木質系プレハブ</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />RC</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />コンクリート系プレハブ</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />その他</label>
+                    </div>
+                </section>
+                <section>
+                    <div class="sectionT flex a-c">
+                        <p>特徴 から探す</p>
+                    </div>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="company_location" value="加賀市" />宅建業免許の登録をしています</label>
+                        <label><input type="checkbox" name="company_location" value="白山市" />県内産の木を使っています</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />設計力・デザイン力に自信あり</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />女性担当者がいます</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />純和風住宅も建てています</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />無垢材・自然素材をふんだんに使用</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />気密性・断熱性に特に自信あり</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />モデルハウスあり</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />制振ダンパー標準搭載</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />オンライン相談できます</label>
+                        <label><input type="checkbox" name="company_location" value="小松市" />自治体以外の補助金実績あり
+                        </label>
+                    </div>
+                </section>
+            </form>
+        </div>
+        <div class="btnG flex col a-c j-c">
+            <a href="{{ url("#") }}">検索する(該当件数163件)</a>
+            <a href="{{ url("#") }}">前のページに戻る</a>
+            <a href="{{ url("#") }}">TOPページに戻る</a>
+        </div>
+    </main>
+    <script src="{{ asset("/./assets/js/script.js") }}"></script>
+</body>
+
+</html>

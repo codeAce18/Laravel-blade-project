@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ asset("/./assets/css/style.css") }}" />
+    <title>Check Boxies</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="section">
+            <div class="s-bc">施工可能エリアから探す</div>
+            <div class="sectionG">
+                <div class="sectionC">
+                    <div class="row">
+                        <input type="checkbox" id="osaka1" class="prefecture-checkbox" checked />
+                        <label for="osaka1">大阪府</label>
+                        <span class="toggle-btn" data-target="osaka-areas-1">【開く＋】</span>
+                    </div>
+                    <div class="area-list" id="osaka-areas-1">
+                        <div class="area-group">
+                            <label class="area-group-title"><input type="checkbox" class="group-checkbox" />大阪市</label>
+                            <div class="checkbox-list">
+                                <label><input type="checkbox" class="child-checkbox" />平野区</label>
+                                <label><input type="checkbox" class="child-checkbox" />住吉区</label>
+                                <label><input type="checkbox" class="child-checkbox" />西成区</label>
+                                <label><input type="checkbox" class="child-checkbox" />都島区</label>
+                                <label><input type="checkbox" class="child-checkbox" />西区</label>
+                                <label><input type="checkbox" class="child-checkbox" />大正区</label>
+                                <label><input type="checkbox" class="child-checkbox" />東淀川区</label>
+                                <label><input type="checkbox" class="child-checkbox" />生野区</label>
+                                <label><input type="checkbox" class="child-checkbox" />鶴見区</label>
+                                <label><input type="checkbox" class="child-checkbox" />西淀川区</label>
+                                <label><input type="checkbox" class="child-checkbox" />東成区</label>
+                                <label><input type="checkbox" class="child-checkbox" />福島区</label>
+                                <label><input type="checkbox" class="child-checkbox" />淀川区</label>
+                                <label><input type="checkbox" class="child-checkbox" />城東区</label>
+                                <label><input type="checkbox" class="child-checkbox" />住之江区</label>
+                                <label><input type="checkbox" class="child-checkbox" />北区</label>
+                                <label><input type="checkbox" class="child-checkbox" />旭区</label>
+                                <label><input type="checkbox" class="child-checkbox" />中央区</label>
+                                <label><input type="checkbox" class="child-checkbox" />此花区</label>
+                                <label><input type="checkbox" class="child-checkbox" />阿倍野区</label>
+                                <label><input type="checkbox" class="child-checkbox" />港区</label>
+                                <label><input type="checkbox" class="child-checkbox" />天王寺区</label>
+                                <label><input type="checkbox" class="child-checkbox" />浪速区</label>
+                            </div>
+                        </div>
+                        <div class="area-group">
+                            <label class="area-group-title"><input type="checkbox" class="group-checkbox" />堺市</label>
+                            <div class="checkbox-list">
+                                <label><input type="checkbox" class="child-checkbox" />堺区</label>
+                                <label><input type="checkbox" class="child-checkbox" />南区</label>
+                                <label><input type="checkbox" class="child-checkbox" />中区</label>
+                                <label><input type="checkbox" class="child-checkbox" />北区</label>
+                                <label><input type="checkbox" class="child-checkbox" />東区</label>
+                                <label><input type="checkbox" class="child-checkbox" />美原区</label>
+                                <label><input type="checkbox" class="child-checkbox" />西区</label>
+                            </div>
+                        </div>
+                        <div class="area-group">
+                            <label class="area-group-title"><input type="checkbox" class="group-checkbox" />豊能郡</label>
+                            <div class="checkbox-list">
+                                <label><input type="checkbox" class="child-checkbox" />能勢町</label>
+                                <label><input type="checkbox" class="child-checkbox" />豊能町</label>
+                            </div>
+                        </div>
+                        <div class="area-group">
+                            <label class="area-group-title"><input type="checkbox" class="group-checkbox" />三島郡</label>
+                            <div class="checkbox-list">
+                                <label><input type="checkbox" class="child-checkbox" />島本町</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sectionC">
+                    <div class="row">
+                        <input type="checkbox" id="hyogo1" class="prefecture-checkbox" checked />
+                        <label for="hyogo1">兵庫県</label>
+                        <span class="toggle-btn" data-target="hyogo-areas-1">【開く＋】</span>
+                    </div>
+                    <div class="area-list" id="hyogo-areas-1">
+                        <div class="area-group">
+                            <label class="area-group-title"><input type="checkbox" class="group-checkbox" />神戸市</label>
+                            <div class="checkbox-list underLine">
+                                <label><input type="checkbox" class="child-checkbox" />東灘区</label>
+                                <label><input type="checkbox" class="child-checkbox" />灘区</label>
+                                <label><input type="checkbox" class="child-checkbox" />中央区</label>
+                                <label><input type="checkbox" class="child-checkbox" />兵庫区</label>
+                                <label><input type="checkbox" class="child-checkbox" />北区</label>
+                                <label><input type="checkbox" class="child-checkbox" />長田区
+                                </label>
+                                <label><input type="checkbox" class="child-checkbox" />須磨区
+                                </label>
+                                <label><input type="checkbox" class="child-checkbox" />垂水区
+                                </label>
+                            </div>
+                            <div class="checkbox-list">
+                                <label><input type="checkbox" class="child-checkbox" />尼崎市</label>
+                                <label><input type="checkbox" class="child-checkbox" />伊丹市</label>
+                                <label><input type="checkbox" class="child-checkbox" />宝塚市</label>
+                                <label><input type="checkbox" class="child-checkbox" />川西市</label>
+                                <label><input type="checkbox" class="child-checkbox" />西宮市</label>
+                                <label><input type="checkbox" class="child-checkbox" />芦屋市
+                                </label>
+                                <label><input type="checkbox" class="child-checkbox" />三田市
+                                </label>
+                                <label><input type="checkbox" class="child-checkbox" />猪名川町
+                                </label>
+                                <label><input type="checkbox" class="child-checkbox" />丹波篠山市
+                                </label>
+                                <label><input type="checkbox" class="child-checkbox" />丹波市
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sectionC">
+                    <div class="row">
+                        <input type="checkbox" id="kyoto1" class="prefecture-checkbox" checked />
+                        <label for="kyogo1">京都府</label>
+                        <span class="toggle-btn" data-target="kyoto-areas-1">【開く＋】</span>
+                    </div>
+                    <div class="area-list" id="kyoto-areas-1">
+                        <div class="area-group">
+                            <label class="area-group-title"><input type="checkbox" class="group-checkbox" />京都市</label>
+                            <div class="checkbox-list underLine">
+                                <label><input type="checkbox" class="child-checkbox" />北区</label>
+                                <label><input type="checkbox" class="child-checkbox" />上京区</label>
+                                <label><input type="checkbox" class="child-checkbox" />左京区</label>
+                                <label><input type="checkbox" class="child-checkbox" />中京区</label>
+                                <label><input type="checkbox" class="child-checkbox" />東山区</label>
+                                <label><input type="checkbox" class="child-checkbox" />山科区</label>
+                                <label><input type="checkbox" class="child-checkbox" />下京区</label>
+                                <label><input type="checkbox" class="child-checkbox" />南区</label>
+                                <label><input type="checkbox" class="child-checkbox" />右京区</label>
+                                <label><input type="checkbox" class="child-checkbox" />西京区</label>
+                                <label><input type="checkbox" class="child-checkbox" />伏見区</label>
+                                <label><input type="checkbox" class="child-checkbox" />阿倍野区</label>
+                                <label><input type="checkbox" class="child-checkbox" />都島区
+                                </label>
+                                <label><input type="checkbox" class="child-checkbox" />西淀川区</label>
+                                <label><input type="checkbox" class="child-checkbox" />旭区</label>
+                                <label><input type="checkbox" class="child-checkbox" />港区</label>
+                                <label><input type="checkbox" class="child-checkbox" />西区</label>
+                                <label><input type="checkbox" class="child-checkbox" />東成区</label>
+                                <label><input type="checkbox" class="child-checkbox" />中央区</label>
+                                <label><input type="checkbox" class="child-checkbox" />天王寺区</label>
+                                <label><input type="checkbox" class="child-checkbox" />大正区</label>
+                                <label><input type="checkbox" class="child-checkbox" />福島区</label>
+                                <label><input type="checkbox" class="child-checkbox" />此花区</label>
+                                <label><input type="checkbox" class="child-checkbox" />浪速区</label>
+                            </div>
+                            <div class="checkbox-list underLine">
+                                <label><input type="checkbox" class="child-checkbox" />福知山市</label>
+                                <label><input type="checkbox" class="child-checkbox" />舞鶴市</label>
+                                <label><input type="checkbox" class="child-checkbox" />綾部市</label>
+                                <label><input type="checkbox" class="child-checkbox" />宇治市</label>
+                                <label><input type="checkbox" class="child-checkbox" />宮津市</label>
+                                <label><input type="checkbox" class="child-checkbox" />亀岡市</label>
+                                <label><input type="checkbox" class="child-checkbox" />城陽市</label>
+                                <label><input type="checkbox" class="child-checkbox" />向日市</label>
+                                <label><input type="checkbox" class="child-checkbox" />長岡京市</label>
+                                <label><input type="checkbox" class="child-checkbox" />八幡市</label>
+                                <label><input type="checkbox" class="child-checkbox" />京田辺市</label>
+                                <label><input type="checkbox" class="child-checkbox" />京丹後市</label>
+                                <label><input type="checkbox" class="child-checkbox" />南丹市</label>
+                                <label><input type="checkbox" class="child-checkbox" />木津川市</label>
+                                <label><input type="checkbox" class="child-checkbox" />大山崎町</label>
+                                <label><input type="checkbox" class="child-checkbox" />久御山町</label>
+                            </div>
+                        </div>
+                        <div class="area-group">
+                            <label class="area-group-title"><input type="checkbox" class="group-checkbox" />綴喜郡</label>
+                            <div class="checkbox-list">
+                                <label><input type="checkbox" class="child-checkbox" />井手町</label>
+                                <label><input type="checkbox" class="child-checkbox" />宇治田原町</label>
+                            </div>
+                        </div>
+                        <div class="area-group">
+                            <label class="area-group-title"><input type="checkbox" class="group-checkbox" />相楽郡</label>
+                            <div class="checkbox-list underLine">
+                                <label><input type="checkbox" class="child-checkbox" />笠置町</label>
+                                <label><input type="checkbox" class="child-checkbox" />和束町</label>
+                                <label><input type="checkbox" class="child-checkbox" />精華町</label>
+                                <label><input type="checkbox" class="child-checkbox" />南山城村</label>
+                            </div>
+                            <div class="checkbox-list underLine">
+                                <label><input type="checkbox" class="child-checkbox" />京丹波町</label>
+                            </div>
+                        </div>
+                        <div class="area-group">
+                            <label class="area-group-title"><input type="checkbox" class="group-checkbox" />与謝郡</label>
+                            <div class="checkbox-list">
+                                <label><input type="checkbox" class="child-checkbox" />伊根町</label>
+                                <label><input type="checkbox" class="child-checkbox" />与謝野町</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sectionC">
+                    <div class="row">
+                        <input type="checkbox" id="nara1" class="prefecture-checkbox" checked />
+                        <label for="nara1">奈良県</label>
+                        <span class="toggle-btn" data-target="nara-areas-1">【開く＋】</span>
+                    </div>
+                    <div class="area-list" id="nara-areas-1">
+                        <div class="area-group">
+                            <div class="checkbox-list">
+                                <label><input type="checkbox" class="child-checkbox" />奈良市</label>
+                                <label><input type="checkbox" class="child-checkbox" />大和高田市</label>
+                                <label><input type="checkbox" class="child-checkbox" />大和郡山市</label>
+                                <label><input type="checkbox" class="child-checkbox" />天理市</label>
+                                <label><input type="checkbox" class="child-checkbox" />橿原市</label>
+                                <label><input type="checkbox" class="child-checkbox" />桜井市</label>
+                                <label><input type="checkbox" class="child-checkbox" />五條市</label>
+                                <label><input type="checkbox" class="child-checkbox" />御所市</label>
+                                <label><input type="checkbox" class="child-checkbox" />生駒市</label>
+                                <label><input type="checkbox" class="child-checkbox" />香芝市</label>
+                                <label><input type="checkbox" class="child-checkbox" />葛城市</label>
+                                <label><input type="checkbox" class="child-checkbox" />宇陀市</label>
+                                <label><input type="checkbox" class="child-checkbox" />山添村</label>
+                                <label><input type="checkbox" class="child-checkbox" />平群町</label>
+                                <label><input type="checkbox" class="child-checkbox" />三郷町</label>
+                                <label><input type="checkbox" class="child-checkbox" />斑鳩町</label>
+                                <label><input type="checkbox" class="child-checkbox" />安堵町</label>
+                                <label><input type="checkbox" class="child-checkbox" />川西町</label>
+                                <label><input type="checkbox" class="child-checkbox" />三宅町</label>
+                                <label><input type="checkbox" class="child-checkbox" />田原本町</label>
+                                <label><input type="checkbox" class="child-checkbox" />曽爾村</label>
+                                <label><input type="checkbox" class="child-checkbox" />御杖村</label>
+                                <label><input type="checkbox" class="child-checkbox" />高取町</label>
+                                <label><input type="checkbox" class="child-checkbox" />明日香村</label>
+                                <label><input type="checkbox" class="child-checkbox" />上牧町</label>
+                                <label><input type="checkbox" class="child-checkbox" />王寺町</label>
+                                <label><input type="checkbox" class="child-checkbox" />広陵町</label>
+                                <label><input type="checkbox" class="child-checkbox" />河合町</label>
+                                <label><input type="checkbox" class="child-checkbox" />吉野町</label>
+                                <label><input type="checkbox" class="child-checkbox" />大淀町</label>
+                                <label><input type="checkbox" class="child-checkbox" />下市町</label>
+                                <label><input type="checkbox" class="child-checkbox" />黒滝村</label>
+                                <label><input type="checkbox" class="child-checkbox" />天川村</label>
+                                <label><input type="checkbox" class="child-checkbox" />野迫川村</label>
+                                <label><input type="checkbox" class="child-checkbox" />十津川村</label>
+                                <label><input type="checkbox" class="child-checkbox" />下北山村</label>
+                                <label><input type="checkbox" class="child-checkbox" />上北山村</label>
+                                <label><input type="checkbox" class="child-checkbox" />川上村</label>
+                                <label><input type="checkbox" class="child-checkbox" />東吉野村</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sectionC">
+                    <div class="row">
+                        <input type="checkbox" id="wakayama1" class="prefecture-checkbox" checked />
+                        <label for="wakayama1">和歌山県</label>
+                        <span class="toggle-btn" data-target="wakayama-areas-1">【開く＋】</span>
+                    </div>
+                    <div class="area-list" id="wakayama-areas-1">
+                        <div class="area-group">
+                            <div class="checkbox-list">
+                                <label><input type="checkbox" class="child-checkbox" />和歌山市</label>
+                                <label><input type="checkbox" class="child-checkbox" />海南市</label>
+                                <label><input type="checkbox" class="child-checkbox" />橋本市</label>
+                                <label><input type="checkbox" class="child-checkbox" />有田市</label>
+                                <label><input type="checkbox" class="child-checkbox" />御坊市</label>
+                                <label><input type="checkbox" class="child-checkbox" />田辺市</label>
+                                <label><input type="checkbox" class="child-checkbox" />新宮市</label>
+                                <label><input type="checkbox" class="child-checkbox" />紀の川市</label>
+                                <label><input type="checkbox" class="child-checkbox" />岩出市</label>
+                                <label><input type="checkbox" class="child-checkbox" />海草郡</label>
+                                <label><input type="checkbox" class="child-checkbox" />伊都郡</label>
+                                <label><input type="checkbox" class="child-checkbox" />有田郡</label>
+                                <label><input type="checkbox" class="child-checkbox" />日高郡</label>
+                                <label><input type="checkbox" class="child-checkbox" />西牟田郡</label>
+                                <label><input type="checkbox" class="child-checkbox" />東牟田郡</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat for other prefectures (兵庫県, 京都府, etc.) -->
+        </div>
+        <div class="section">
+            <div class="s-bc">会社所在地から探す</div>
+            <div class="sectionG">
+                <div class="sectionC">
+                    <div class="row">
+                        <input type="checkbox" id="osaka2" class="prefecture-checkbox" checked />
+                        <label for="osaka2">大阪府</label>
+                        <span class="toggle-btn" data-target="osaka-areas-2">【開く＋】</span>
+                    </div>
+                    <div class="area-list" id="osaka-areas-2">
+                        <div class="area-group">
+                            <label class="area-group-title"><input type="checkbox" class="group-checkbox" />大阪市</label>
+                            <div class="checkbox-list">
+                                <label><input type="checkbox" class="child-checkbox" />平野区</label>
+                                <label><input type="checkbox" class="child-checkbox" />住吉区</label>
+                                <label><input type="checkbox" class="child-checkbox" />西成区</label>
+                                <label><input type="checkbox" class="child-checkbox" />都島区</label>
+                                <label><input type="checkbox" class="child-checkbox" />西区</label>
+                                <label><input type="checkbox" class="child-checkbox" />大正区</label>
+                                <label><input type="checkbox" class="child-checkbox" />東淀川区</label>
+                                <label><input type="checkbox" class="child-checkbox" />生野区</label>
+                                <label><input type="checkbox" class="child-checkbox" />鶴見区</label>
+                                <label><input type="checkbox" class="child-checkbox" />西淀川区</label>
+                                <label><input type="checkbox" class="child-checkbox" />東成区</label>
+                                <label><input type="checkbox" class="child-checkbox" />福島区</label>
+                                <label><input type="checkbox" class="child-checkbox" />淀川区</label>
+                                <label><input type="checkbox" class="child-checkbox" />城東区</label>
+                                <label><input type="checkbox" class="child-checkbox" />住之江区</label>
+                                <label><input type="checkbox" class="child-checkbox" />北区</label>
+                                <label><input type="checkbox" class="child-checkbox" />旭区</label>
+                                <label><input type="checkbox" class="child-checkbox" />中央区</label>
+                                <label><input type="checkbox" class="child-checkbox" />此花区</label>
+                                <label><input type="checkbox" class="child-checkbox" />阿倍野区</label>
+                                <label><input type="checkbox" class="child-checkbox" />港区</label>
+                                <label><input type="checkbox" class="child-checkbox" />天王寺区</label>
+                                <label><input type="checkbox" class="child-checkbox" />浪速区</label>
+                            </div>
+                        </div>
+                        <div class="area-group">
+                            <label class="area-group-title"><input type="checkbox" class="group-checkbox" />堺市</label>
+                            <div class="checkbox-list">
+                                <label><input type="checkbox" class="child-checkbox" />堺区</label>
+                                <label><input type="checkbox" class="child-checkbox" />南区</label>
+                                <label><input type="checkbox" class="child-checkbox" />中区</label>
+                                <label><input type="checkbox" class="child-checkbox" />北区</label>
+                                <label><input type="checkbox" class="child-checkbox" />東区</label>
+                                <label><input type="checkbox" class="child-checkbox" />美原区</label>
+                                <label><input type="checkbox" class="child-checkbox" />西区</label>
+                            </div>
+                        </div>
+                        <div class="area-group">
+                            <label class="area-group-title"><input type="checkbox" class="group-checkbox" />豊能郡</label>
+                            <div class="checkbox-list">
+                                <label><input type="checkbox" class="child-checkbox" />能勢町</label>
+                                <label><input type="checkbox" class="child-checkbox" />豊能町</label>
+                            </div>
+                        </div>
+                        <div class="area-group">
+                            <label class="area-group-title"><input type="checkbox" class="group-checkbox" />三島郡</label>
+                            <div class="checkbox-list">
+                                <label><input type="checkbox" class="child-checkbox" />島本町</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sectionC">
+                    <div class="row">
+                        <input type="checkbox" id="hyogo2" class="prefecture-checkbox" checked />
+                        <label for="hyogo2">兵庫県</label>
+                        <span class="toggle-btn" data-target="hyogo-areas-2">【開く＋】</span>
+                    </div>
+                    <div class="area-list" id="hyogo-areas-2">
+                        <div class="area-group">
+                            <label class="area-group-title"><input type="checkbox" class="group-checkbox" />神戸市</label>
+                            <div class="checkbox-list underLine">
+                                <label><input type="checkbox" class="child-checkbox" />東灘区</label>
+                                <label><input type="checkbox" class="child-checkbox" />灘区</label>
+                                <label><input type="checkbox" class="child-checkbox" />中央区</label>
+                                <label><input type="checkbox" class="child-checkbox" />兵庫区</label>
+                                <label><input type="checkbox" class="child-checkbox" />北区</label>
+                                <label><input type="checkbox" class="child-checkbox" />長田区
+                                </label>
+                                <label><input type="checkbox" class="child-checkbox" />須磨区
+                                </label>
+                                <label><input type="checkbox" class="child-checkbox" />垂水区
+                                </label>
+                            </div>
+                            <div class="checkbox-list">
+                                <label><input type="checkbox" class="child-checkbox" />尼崎市</label>
+                                <label><input type="checkbox" class="child-checkbox" />伊丹市</label>
+                                <label><input type="checkbox" class="child-checkbox" />宝塚市</label>
+                                <label><input type="checkbox" class="child-checkbox" />川西市</label>
+                                <label><input type="checkbox" class="child-checkbox" />西宮市</label>
+                                <label><input type="checkbox" class="child-checkbox" />芦屋市
+                                </label>
+                                <label><input type="checkbox" class="child-checkbox" />三田市
+                                </label>
+                                <label><input type="checkbox" class="child-checkbox" />猪名川町
+                                </label>
+                                <label><input type="checkbox" class="child-checkbox" />丹波篠山市
+                                </label>
+                                <label><input type="checkbox" class="child-checkbox" />丹波市
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sectionC">
+                    <div class="row">
+                        <input type="checkbox" id="kyoto2" class="prefecture-checkbox" checked />
+                        <label for="kyogo2">京都府</label>
+                        <span class="toggle-btn" data-target="kyoto-areas-2">【開く＋】</span>
+                    </div>
+                    <div class="area-list" id="kyoto-areas-2">
+                        <div class="area-group">
+                            <label class="area-group-title"><input type="checkbox" class="group-checkbox" />京都市</label>
+                            <div class="checkbox-list underLine">
+                                <label><input type="checkbox" class="child-checkbox" />北区</label>
+                                <label><input type="checkbox" class="child-checkbox" />上京区</label>
+                                <label><input type="checkbox" class="child-checkbox" />左京区</label>
+                                <label><input type="checkbox" class="child-checkbox" />中京区</label>
+                                <label><input type="checkbox" class="child-checkbox" />東山区</label>
+                                <label><input type="checkbox" class="child-checkbox" />山科区</label>
+                                <label><input type="checkbox" class="child-checkbox" />下京区</label>
+                                <label><input type="checkbox" class="child-checkbox" />南区</label>
+                                <label><input type="checkbox" class="child-checkbox" />右京区</label>
+                                <label><input type="checkbox" class="child-checkbox" />西京区</label>
+                                <label><input type="checkbox" class="child-checkbox" />伏見区</label>
+                                <label><input type="checkbox" class="child-checkbox" />阿倍野区</label>
+                                <label><input type="checkbox" class="child-checkbox" />都島区
+                                </label>
+                                <label><input type="checkbox" class="child-checkbox" />西淀川区</label>
+                                <label><input type="checkbox" class="child-checkbox" />旭区</label>
+                                <label><input type="checkbox" class="child-checkbox" />港区</label>
+                                <label><input type="checkbox" class="child-checkbox" />西区</label>
+                                <label><input type="checkbox" class="child-checkbox" />東成区</label>
+                                <label><input type="checkbox" class="child-checkbox" />中央区</label>
+                                <label><input type="checkbox" class="child-checkbox" />天王寺区</label>
+                                <label><input type="checkbox" class="child-checkbox" />大正区</label>
+                                <label><input type="checkbox" class="child-checkbox" />福島区</label>
+                                <label><input type="checkbox" class="child-checkbox" />此花区</label>
+                                <label><input type="checkbox" class="child-checkbox" />浪速区</label>
+                            </div>
+                            <div class="checkbox-list underLine">
+                                <label><input type="checkbox" class="child-checkbox" />福知山市</label>
+                                <label><input type="checkbox" class="child-checkbox" />舞鶴市</label>
+                                <label><input type="checkbox" class="child-checkbox" />綾部市</label>
+                                <label><input type="checkbox" class="child-checkbox" />宇治市</label>
+                                <label><input type="checkbox" class="child-checkbox" />宮津市</label>
+                                <label><input type="checkbox" class="child-checkbox" />亀岡市</label>
+                                <label><input type="checkbox" class="child-checkbox" />城陽市</label>
+                                <label><input type="checkbox" class="child-checkbox" />向日市</label>
+                                <label><input type="checkbox" class="child-checkbox" />長岡京市</label>
+                                <label><input type="checkbox" class="child-checkbox" />八幡市</label>
+                                <label><input type="checkbox" class="child-checkbox" />京田辺市</label>
+                                <label><input type="checkbox" class="child-checkbox" />京丹後市</label>
+                                <label><input type="checkbox" class="child-checkbox" />南丹市</label>
+                                <label><input type="checkbox" class="child-checkbox" />木津川市</label>
+                                <label><input type="checkbox" class="child-checkbox" />大山崎町</label>
+                                <label><input type="checkbox" class="child-checkbox" />久御山町</label>
+                            </div>
+                        </div>
+                        <div class="area-group">
+                            <label class="area-group-title"><input type="checkbox" class="group-checkbox" />綴喜郡</label>
+                            <div class="checkbox-list">
+                                <label><input type="checkbox" class="child-checkbox" />井手町</label>
+                                <label><input type="checkbox" class="child-checkbox" />宇治田原町</label>
+                            </div>
+                        </div>
+                        <div class="area-group">
+                            <label class="area-group-title"><input type="checkbox" class="group-checkbox" />相楽郡</label>
+                            <div class="checkbox-list underLine">
+                                <label><input type="checkbox" class="child-checkbox" />笠置町</label>
+                                <label><input type="checkbox" class="child-checkbox" />和束町</label>
+                                <label><input type="checkbox" class="child-checkbox" />精華町</label>
+                                <label><input type="checkbox" class="child-checkbox" />南山城村</label>
+                            </div>
+                            <div class="checkbox-list underLine">
+                                <label><input type="checkbox" class="child-checkbox" />京丹波町</label>
+                            </div>
+                        </div>
+                        <div class="area-group">
+                            <label class="area-group-title"><input type="checkbox" class="group-checkbox" />与謝郡</label>
+                            <div class="checkbox-list">
+                                <label><input type="checkbox" class="child-checkbox" />伊根町</label>
+                                <label><input type="checkbox" class="child-checkbox" />与謝野町</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sectionC">
+                    <div class="row">
+                        <input type="checkbox" id="nara2" class="prefecture-checkbox" checked />
+                        <label for="nara2">奈良県</label>
+                        <span class="toggle-btn" data-target="nara-areas-2">【開く＋】</span>
+                    </div>
+                    <div class="area-list" id="nara-areas-2">
+                        <div class="area-group">
+                            <div class="checkbox-list">
+                                <label><input type="checkbox" class="child-checkbox" />奈良市</label>
+                                <label><input type="checkbox" class="child-checkbox" />大和高田市</label>
+                                <label><input type="checkbox" class="child-checkbox" />大和郡山市</label>
+                                <label><input type="checkbox" class="child-checkbox" />天理市</label>
+                                <label><input type="checkbox" class="child-checkbox" />橿原市</label>
+                                <label><input type="checkbox" class="child-checkbox" />桜井市</label>
+                                <label><input type="checkbox" class="child-checkbox" />五條市</label>
+                                <label><input type="checkbox" class="child-checkbox" />御所市</label>
+                                <label><input type="checkbox" class="child-checkbox" />生駒市</label>
+                                <label><input type="checkbox" class="child-checkbox" />香芝市</label>
+                                <label><input type="checkbox" class="child-checkbox" />葛城市</label>
+                                <label><input type="checkbox" class="child-checkbox" />宇陀市</label>
+                                <label><input type="checkbox" class="child-checkbox" />山添村</label>
+                                <label><input type="checkbox" class="child-checkbox" />平群町</label>
+                                <label><input type="checkbox" class="child-checkbox" />三郷町</label>
+                                <label><input type="checkbox" class="child-checkbox" />斑鳩町</label>
+                                <label><input type="checkbox" class="child-checkbox" />安堵町</label>
+                                <label><input type="checkbox" class="child-checkbox" />川西町</label>
+                                <label><input type="checkbox" class="child-checkbox" />三宅町</label>
+                                <label><input type="checkbox" class="child-checkbox" />田原本町</label>
+                                <label><input type="checkbox" class="child-checkbox" />曽爾村</label>
+                                <label><input type="checkbox" class="child-checkbox" />御杖村</label>
+                                <label><input type="checkbox" class="child-checkbox" />高取町</label>
+                                <label><input type="checkbox" class="child-checkbox" />明日香村</label>
+                                <label><input type="checkbox" class="child-checkbox" />上牧町</label>
+                                <label><input type="checkbox" class="child-checkbox" />王寺町</label>
+                                <label><input type="checkbox" class="child-checkbox" />広陵町</label>
+                                <label><input type="checkbox" class="child-checkbox" />河合町</label>
+                                <label><input type="checkbox" class="child-checkbox" />吉野町</label>
+                                <label><input type="checkbox" class="child-checkbox" />大淀町</label>
+                                <label><input type="checkbox" class="child-checkbox" />下市町</label>
+                                <label><input type="checkbox" class="child-checkbox" />黒滝村</label>
+                                <label><input type="checkbox" class="child-checkbox" />天川村</label>
+                                <label><input type="checkbox" class="child-checkbox" />野迫川村</label>
+                                <label><input type="checkbox" class="child-checkbox" />十津川村</label>
+                                <label><input type="checkbox" class="child-checkbox" />下北山村</label>
+                                <label><input type="checkbox" class="child-checkbox" />上北山村</label>
+                                <label><input type="checkbox" class="child-checkbox" />川上村</label>
+                                <label><input type="checkbox" class="child-checkbox" />東吉野村</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sectionC">
+                    <div class="row">
+                        <input type="checkbox" id="wakayama2" class="prefecture-checkbox" checked />
+                        <label for="wakayama2">和歌山県</label>
+                        <span class="toggle-btn" data-target="wakayama-areas-2">【開く＋】</span>
+                    </div>
+                    <div class="area-list" id="wakayama-areas-2">
+                        <div class="area-group">
+                            <div class="checkbox-list">
+                                <label><input type="checkbox" class="child-checkbox" />和歌山市</label>
+                                <label><input type="checkbox" class="child-checkbox" />海南市</label>
+                                <label><input type="checkbox" class="child-checkbox" />橋本市</label>
+                                <label><input type="checkbox" class="child-checkbox" />有田市</label>
+                                <label><input type="checkbox" class="child-checkbox" />御坊市</label>
+                                <label><input type="checkbox" class="child-checkbox" />田辺市</label>
+                                <label><input type="checkbox" class="child-checkbox" />新宮市</label>
+                                <label><input type="checkbox" class="child-checkbox" />紀の川市</label>
+                                <label><input type="checkbox" class="child-checkbox" />岩出市</label>
+                                <label><input type="checkbox" class="child-checkbox" />海草郡</label>
+                                <label><input type="checkbox" class="child-checkbox" />伊都郡</label>
+                                <label><input type="checkbox" class="child-checkbox" />有田郡</label>
+                                <label><input type="checkbox" class="child-checkbox" />日高郡</label>
+                                <label><input type="checkbox" class="child-checkbox" />西牟田郡</label>
+                                <label><input type="checkbox" class="child-checkbox" />東牟田郡</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat for other prefectures (兵庫県, 京都府, etc.) -->
+        </div>
+    </main>
+    <footer></footer>
+</body>
+<script src="{{ asset("/./assets/js/script.js") }}"></script>
+
+</html>

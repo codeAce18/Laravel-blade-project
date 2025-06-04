@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", "Arial", "Yu Gothic", "游ゴシック体", YuGothic,
+    ”游ゴシック Medium”, “Yu Gothic Medium”, "Hiragino Kaku Gothic ProN",
+    "ヒラギノ角ゴ ProN W3", メイリオ, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: calc(1 / 1920 * 100vw);
+}
+body {
+  width: 100%;
+  /* max-width: 1440px; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+.flex {
+  display: flex;
+}
+.col {
+  flex-direction: column;
+}
+.a-c {
+  align-items: center;
+}
+.a-b {
+  align-items: baseline;
+}
+.j-c {
+  justify-content: center;
+}
+.j-b {
+  justify-content: space-between;
+}
+.j-a {
+  justify-content: space-around;
+}
+.container {
+  width: 960px;
+}
+.sentence-space {
+  display: inline-block;
+  width: 20px;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.section {
+  width: 100%;
+  max-width: 960px;
+  border-bottom: 2px solid #333;
+  padding: 20px 0;
+  display: flex;
+  color: #333333;
+}
+.row {
+  display: flex;
+  align-items: center;
+  padding-inline: 10px;
+  padding-block: 6px;
+}
+.row label {
+  margin-left: 8px;
+  margin-right: 16px;
+  font-size: 15px;
+  color: #6782ae;
+  font-weight: 600;
+}
+.toggle-btn {
+  color: #0070f3;
+  cursor: pointer;
+  margin-left: auto;
+  font-size: 16px;
+  font-weight: bold;
+}
+.area-list {
+  display: none;
+  margin-top: 10px;
+  padding-inline: 10px;
+}
+.area-list.active {
+  display: block;
+}
+.area-group {
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+.area-group-title {
+  font-weight: bold;
+  margin-top: 8px;
+}
+.checkbox-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 0px;
+  margin-left: 10px;
+  padding-block: 20px;
+}
+.checkbox-list label {
+  min-width: 25%;
+}
+.sectionC {
+  margin-left: 22px;
+  border-bottom: 1px solid #333333;
+}
+.sectionG {
+  width: 100%;
+}
+.underLine {
+  border-bottom: 1px solid #cccccc;
+}
+.s-bc {
+  font-size: 15px;
+  font-weight: 600;
+  width: 130px;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 23px;
+  padding-block: 13px;
+}
+
+@media (max-width: 500px) {
+  .section {
+    flex-direction: column;
+  }
+  .s-bc {
+    width: 100%;
+  }
+}
