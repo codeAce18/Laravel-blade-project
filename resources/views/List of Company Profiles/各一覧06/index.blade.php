@@ -6,12 +6,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="{{ asset("/./assets/css/style.css") }}" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>各一覧06</title>
 </head>
 
 <body>
-    @include('components.header')
+    {{-- header begining  --}}
+    <header>
+        <div class="menu_part">
+            <div class="topBar">
+                <div class="site_name flex j-c a-c">
+                    <p>
+                        大阪府 兵庫県 奈良県 で 注文住宅
+                        を建てるなら株式会社桝田工務店【イエタッタ】
+                    </p>
+                </div>
+                <div class="num_s flex j-c">
+                    <div class="container flex a-c j-b">
+                        <div class="num flex a-c">
+                            <div class="data flex a-b">
+                                <p>住宅会社</p>
+                                <p>352</p>
+                                <p>社</p>
+                            </div>
+                            <div class="data flex a-b">
+                                <p>施工事例</p>
+                                <p>689</p>
+                                <p>社</p>
+                            </div>
+                            <div class="data flex a-b">
+                                <p>モデルハウス</p>
+                                <p>112</p>
+                                <p>社</p>
+                            </div>
+                            <div class="data flex a-b">
+                                <p>土地・建売</p>
+                                <p>156</p>
+                                <p>社</p>
+                            </div>
+                        </div>
+                        <div class="search_c flex a-c">
+                            <button class="s_btn" id="reqInfo">まとめて資料請求する</button>
+                            <div class="search flex a-c">
+                                <input type="text" placeholder="会社名やキーワードで検索" />
+                                <button class="sBtn" id="sBtn">
+                                    <img src="./assets/img/search_icon.png" alt="" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menuBar flex col a-c j-c">
+                <div class="container">
+                    <div class="t_part flex j-c a-c">
+                        <div class="ribbon flex col a-c">
+                            <img src="./assets/img/heart_noti.png" class="heart" alt="heart" />
+                            <div class="count">0 件</div>
+                            <div class="label">お気に入り</div>
+                        </div>
+                        <div class="ribbonSp">
+                            <div class="ribbonSpimg">
+                                <div class="noti">126</div>
+                            </div>
+                            <p>お気に入り</p>
+                        </div>
+                        <img src="./assets/img/title.png" class="title" alt="title" />
+                        <div class="hamburger" onclick="toggleMenu()">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <!-- Sliding Menu -->
+                        <div class="ham_menu" id="ham_menu">
+                            <button class="close-btn" onclick="toggleMenu()">×</button>
+                            <div class="menu-items flex col">
+                                <a href="#"> 工務店・ハウスメーカーを探す </a>
+                                <a href="#">施工事例を見る</a>
+                                <a href="#">住宅イベントに行く</a>
+                                <a href="#">モデルハウスを見る</a>
+                                <a href="#"> リノベーション・リフォーム事例を見る </a>
+                                <a href="#">土地・建売・投資用物件を探す</a>
+                                <a href="#">家づくりコラム</a>
+                                <a href="#">家作り基礎講座</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu_list flex j-b">
+                        <a href="#" class="menu flex j-c a-c">
+                            工務店・ハウス<br />メーカーを探す
+                        </a>
+                        <a href="#" class="menu flex col j-c a-c">施工事例を<br />見る</a>
+                        <a href="#" class="menu flex col j-c a-c">住宅イベントに<br />行く</a>
+                        <a href="#" class="menu flex col j-c a-c">モデルハウスを<br />見る</a>
+                        <a href="#" class="menu flex col j-c a-c">
+                            リノベーション・<br />リフォーム事例を見る
+                        </a>
+                        <a href="#" class="menu flex col j-c a-c">土地・建売・<br />投資用物件を探す</a>
+                        <a href="#" class="menu flex col j-c a-c">家づくりコラム</a>
+                        <a href="#" class="menu flex col j-c a-c">家作り基礎講座</a>
+                    </div>
+                    <div class="ad">
+                        <div class="sideBar">
+                            新築・注文住宅サイト イエタッタ >
+                            石川県の工務店・ハウスメーカーを探す > 株式会社桝田工務店
+                        </div>
+                    </div>
+                    <img src="./assets/img/ad_sp.png" class="adSp" alt="adSp" />
+                </div>
+            </div>
+        </div>
+    </header>
+    {{-- header end  --}}
     <main>
         <div class="container">
             <div class="signCom">
@@ -34,7 +140,7 @@
             <div class="slideG flex">
                 <div class="slideBar">
                     <div class="slider-container">
-                        <img id="mainImage" class="main-image" src="{{ asset("/./assets/img/slide_main.png") }}"
+                        <img id="mainImage" class="main-image" src="./assets/img/slide_main.png"
                             alt="Main Image" />
                         <div class="arrow left flex a-c j-c" onclick="prevSlide()">
                             &#10094;
@@ -69,7 +175,7 @@
                 <div class="cards">
                     <div class="card flex j-b">
                         <div class="imgC">
-                            <img src="{{ asset("/./assets/img/card.png") }}" alt="card" />
+                            <img src="./assets/img/card.png" alt="card" />
                         </div>
                         <div class="cardC">
                             <p class="cardT">
@@ -86,7 +192,7 @@
                     </div>
                     <div class="card flex j-b">
                         <div class="imgC">
-                            <img src="{{ asset("/./assets/img/card.png") }}" alt="card" />
+                            <img src="./assets/img/card.png" alt="card" />
                         </div>
                         <div class="cardC">
                             <p class="cardT">
@@ -103,7 +209,7 @@
                     </div>
                     <div class="card flex j-b">
                         <div class="imgC">
-                            <img src="{{ asset("/./assets/img/card.png") }}" alt="card" />
+                            <img src="./assets/img/card.png" alt="card" />
                         </div>
                         <div class="cardC">
                             <p class="cardT">
@@ -120,7 +226,7 @@
                     </div>
                     <div class="card flex j-b">
                         <div class="imgC">
-                            <img src="{{ asset("/./assets/img/card.png") }}" alt="card" />
+                            <img src="./assets/img/card.png" alt="card" />
                         </div>
                         <div class="cardC">
                             <p class="cardT">
@@ -137,7 +243,7 @@
                     </div>
                     <div class="card flex j-b">
                         <div class="imgC">
-                            <img src="{{ asset("/./assets/img/card.png") }}" alt="card" />
+                            <img src="./assets/img/card.png" alt="card" />
                         </div>
                         <div class="cardC">
                             <p class="cardT">
@@ -192,37 +298,37 @@
             <div class="b_history">
                 <div class="b_historyT flex a-c j-b">
                     <p>閲覧履歴</p>
-                    <a href="{{ url("#") }}">
-                        <img src="{{ asset("/./assets/img/arrow.png") }}" alt="arrow" />
+                    <a href="#">
+                        <img src="./assets/img/arrow.png" alt="arrow" />
                     </a>
                 </div>
                 <div class="h_slide flex">
                     <div class="slideBlock">
-                        <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+                        <img src="./assets/img/h_slide.png" alt="h_slide" />
                         <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
                     </div>
                     <div class="slideBlock">
-                        <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+                        <img src="./assets/img/h_slide.png" alt="h_slide" />
                         <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
                     </div>
                     <div class="slideBlock">
-                        <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+                        <img src="./assets/img/h_slide.png" alt="h_slide" />
                         <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
                     </div>
                     <div class="slideBlock">
-                        <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+                        <img src="./assets/img/h_slide.png" alt="h_slide" />
                         <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
                     </div>
                     <div class="slideBlock">
-                        <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+                        <img src="./assets/img/h_slide.png" alt="h_slide" />
                         <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
                     </div>
                     <div class="slideBlock">
-                        <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+                        <img src="./assets/img/h_slide.png" alt="h_slide" />
                         <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
                     </div>
                     <div class="slideBlock">
-                        <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+                        <img src="./assets/img/h_slide.png" alt="h_slide" />
                         <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
                     </div>
                 </div>
@@ -267,8 +373,10 @@
             </div>
         </div>
     </main>
-    @include('components.footer')
-    <script src="{{ asset("/./assets/js/script.js") }}"></script>
+    {{-- footer begining  --}}
+
+    {{-- footer end  --}}
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

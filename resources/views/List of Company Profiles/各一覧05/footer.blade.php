@@ -1,15 +1,15 @@
 <footer>
     <div class="container">
         <div class="top flex a-c j-b">
-            <img src="{{ asset("/./assets/img/title.png") }}" alt="logo" />
+            <img src="./assets/img/title.png" alt="logo" />
             <div class="snsG flex a-c">
-                <img src="{{ asset("/./assets/img/instagram.png") }}" alt="instagram" />
-                <img src="{{ asset("/./assets/img/facebook.png") }}" alt="facebook" />
-                <img src="{{ asset("/./assets/img/x.png") }}" alt="x" />
-                <img src="{{ asset("/./assets/img/youtube.png") }}" alt="youtube" />
-                <img src="{{ asset("/./assets/img/line.png") }}" alt="line" />
-                <img src="{{ asset("/./assets/img/pinterest.png") }}" alt="piterest" />
-                <img src="{{ asset("/./assets/img/tiktok.png") }}" alt="tiktok" />
+                <img src="./assets/img/instagram.png" alt="instagram" />
+                <img src="./assets/img/facebook.png" alt="facebook" />
+                <img src="./assets/img/x.png" alt="x" />
+                <img src="./assets/img/youtube.png" alt="youtube" />
+                <img src="./assets/img/line.png" alt="line" />
+                <img src="./assets/img/pinterest.png" alt="piterest" />
+                <img src="./assets/img/tiktok.png" alt="tiktok" />
             </div>
         </div>
         <div class="menuG flex">
@@ -277,31 +277,31 @@
                 <div class="map_lists">
                     <div class="maplist flex a-c">
                         <p>岩手県版</p>
-                        <img src="{{ asset("/./assets/img/guideMap.png") }}" alt="guideMap_i" />
+                        <img src="./assets/img/guideMap.png" alt="guideMap_i" />
                     </div>
                     <div class="maplist flex a-c">
                         <p>宮城県版</p>
-                        <img src="{{ asset("/./assets/img/guideMap.png") }}" alt="guideMap_i" />
+                        <img src="./assets/img/guideMap.png" alt="guideMap_i" />
                     </div>
                     <div class="maplist flex a-c">
                         <p>山形県版</p>
-                        <img src="{{ asset("/./assets/img/guideMap.png") }}" alt="guideMap_i" />
+                        <img src="./assets/img/guideMap.png" alt="guideMap_i" />
                     </div>
                     <div class="maplist flex a-c">
                         <p>福島県版</p>
-                        <img src="{{ asset("/./assets/img/guideMap.png") }}" alt="guideMap_i" />
+                        <img src="./assets/img/guideMap.png" alt="guideMap_i" />
                     </div>
                     <div class="maplist flex a-c">
                         <p>茨城県版</p>
-                        <img src="{{ asset("/./assets/img/guideMap.png") }}" alt="guideMap_i" />
+                        <img src="./assets/img/guideMap.png" alt="guideMap_i" />
                     </div>
                     <div class="maplist flex a-c">
                         <p>富山県版</p>
-                        <img src="{{ asset("/./assets/img/guideMap.png") }}" alt="guideMap_i" />
+                        <img src="./assets/img/guideMap.png" alt="guideMap_i" />
                     </div>
                     <div class="maplist flex a-c">
                         <p>鹿児島県版</p>
-                        <img src="{{ asset("/./assets/img/guideMap.png") }}" alt="guideMap_i" />
+                        <img src="./assets/img/guideMap.png" alt="guideMap_i" />
                     </div>
                 </div>
             </div>

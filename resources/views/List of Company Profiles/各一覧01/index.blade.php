@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="{{ asset("/./assets/css/style.css") }}" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>各一覧01</title>
 </head>
 
 <body>
-    @include('components.header')
+    {{-- header begining  --}}
+
+    {{-- header end  --}}
     <main>
         <div class="container">
             <div class="signCom">
@@ -49,9 +51,9 @@
                 <div class="blog flex">
                     <div class="imgS">
                         <div class="slider">
-                            <img src="{{ asset("/./assets/img/blog.png") }}" class="active" alt="" />
-                            <img src="{{ asset("/./assets/img/slide02.png") }}" alt="" />
-                            <img src="{{ asset("/./assets/img/slide03.png") }}" alt="" />
+                            <img src="./assets/img/blog.png" class="active" alt="" />
+                            <img src="./assets/img/slide02.png" alt="" />
+                            <img src="./assets/img/slide03.png" alt="" />
                         </div>
                         <div class="dots">
                             <span class="active" data-index="0"></span>
@@ -64,7 +66,7 @@
                             <p>
                                 『地球品質』～自然の恵みと素材を生かし、時と共に心地良さが深まる暮らし
                             </p>
-                            <a href="{{ url("#") }}">詳しくはこちら</a>
+                            <a href="#">詳しくはこちら</a>
                         </div>
                         <div class="statusG flex">
                             <div class="status">完成見学会</div>
@@ -86,7 +88,7 @@
                 <div class="blogList_sp flex col">
                     <div class="blogSp flex a-c">
                         <div class="bImg_sp">
-                            <img src="{{ asset("/./assets/img/blogSp01.png") }}" alt="blogSp01" />
+                            <img src="./assets/img/blogSp01.png" alt="blogSp01" />
                         </div>
                         <div class="blogSp_E">
                             <p class="blogSp_ET">
@@ -108,7 +110,7 @@
                     </div>
                     <div class="blogSp flex a-c">
                         <div class="bImg_sp">
-                            <img src="{{ asset("/./assets/img/blogSp02.png") }}" alt="blogSp02" />
+                            <img src="./assets/img/blogSp02.png" alt="blogSp02" />
                         </div>
                         <div class="blogSp_E">
                             <p class="blogSp_ET">
@@ -130,7 +132,7 @@
                     </div>
                     <div class="blogSp flex a-c">
                         <div class="bImg_sp">
-                            <img src="{{ asset("/./assets/img/blogSp03.png") }}" alt="blogSp03" />
+                            <img src="./assets/img/blogSp03.png" alt="blogSp03" />
                         </div>
                         <div class="blogSp_E">
                             <p class="blogSp_ET">
@@ -171,37 +173,37 @@
             <div class="b_history">
                 <div class="b_historyT flex a-c j-b">
                     <p>閲覧履歴</p>
-                    <a href="{{ url("#") }}">
-                        <img src="{{ asset("/./assets/img/arrow.png") }}" alt="arrow" />
+                    <a href="#">
+                        <img src="./assets/img/arrow.png" alt="arrow" />
                     </a>
                 </div>
                 <div class="h_slide flex">
                     <div class="slideBlock">
-                        <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+                        <img src="./assets/img/h_slide.png" alt="h_slide" />
                         <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
                     </div>
                     <div class="slideBlock">
-                        <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+                        <img src="./assets/img/h_slide.png" alt="h_slide" />
                         <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
                     </div>
                     <div class="slideBlock">
-                        <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+                        <img src="./assets/img/h_slide.png" alt="h_slide" />
                         <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
                     </div>
                     <div class="slideBlock">
-                        <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+                        <img src="./assets/img/h_slide.png" alt="h_slide" />
                         <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
                     </div>
                     <div class="slideBlock">
-                        <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+                        <img src="./assets/img/h_slide.png" alt="h_slide" />
                         <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
                     </div>
                     <div class="slideBlock">
-                        <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+                        <img src="./assets/img/h_slide.png" alt="h_slide" />
                         <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
                     </div>
                     <div class="slideBlock">
-                        <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+                        <img src="./assets/img/h_slide.png" alt="h_slide" />
                         <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
                     </div>
                 </div>
@@ -242,8 +244,10 @@
             </div>
         </div>
     </main>
-    @include('components.footer')
-    <script src="{{ asset("/./assets/js/script.js") }}"></script>
+    {{-- footer begining  --}}
+
+    {{-- footer end  --}}
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

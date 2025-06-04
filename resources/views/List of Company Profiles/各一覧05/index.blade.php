@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="{{ asset("/./assets/css/style.css") }}" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>各一覧05</title>
 </head>
 
 <body>
-    @include('components.header')
+    {{-- header begining  --}}
+
+    {{-- header end  --}}
     <main>
         <div class="container">
             <div class="signCom">
@@ -51,9 +53,9 @@
                 <div class="blog flex">
                     <div class="imgS">
                         <div class="slider">
-                            <img src="{{ asset("/./assets/img/blog.png") }}" class="active" alt="" />
-                            <img src="{{ asset("/./assets/img/slide02.png") }}" alt="" />
-                            <img src="{{ asset("/./assets/img/slide03.png") }}" alt="" />
+                            <img src="./assets/img/blog.png" class="active" alt="" />
+                            <img src="./assets/img/slide02.png" alt="" />
+                            <img src="./assets/img/slide03.png" alt="" />
                         </div>
                         <div class="dots">
                             <span class="active" data-index="0"></span>
@@ -66,7 +68,7 @@
                             <p>
                                 『地球品質』～自然の恵みと素材を生かし、時と共に心地良さが深まる暮らし
                             </p>
-                            <a href="{{ url("#") }}">お気に入り追加</a>
+                            <a href="#">お気に入り追加</a>
                         </div>
                         <div class="statusG flex">
                             <div class="status">リフォーム</div>
@@ -86,9 +88,9 @@
                 <div class="blog flex">
                     <div class="imgS">
                         <div class="slider">
-                            <img src="{{ asset("/./assets/img/blog.png") }}" class="active" alt="" />
-                            <img src="{{ asset("/./assets/img/slide02.png") }}" alt="" />
-                            <img src="{{ asset("/./assets/img/slide03.png") }}" alt="" />
+                            <img src="./assets/img/blog.png" class="active" alt="" />
+                            <img src="./assets/img/slide02.png" alt="" />
+                            <img src="./assets/img/slide03.png" alt="" />
                         </div>
                         <div class="dots">
                             <span class="active" data-index="0"></span>
@@ -101,7 +103,7 @@
                             <p>
                                 『地球品質』～自然の恵みと素材を生かし、時と共に心地良さが深まる暮らし
                             </p>
-                            <a href="{{ url("#") }}">お気に入り追加</a>
+                            <a href="#">お気に入り追加</a>
                         </div>
                         <div class="statusG flex">
                             <div class="status">リフォーム</div>
@@ -121,9 +123,9 @@
                 <div class="blog flex">
                     <div class="imgS">
                         <div class="slider">
-                            <img src="{{ asset("/./assets/img/blog.png") }}" class="active" alt="" />
-                            <img src="{{ asset("/./assets/img/slide02.png") }}" alt="" />
-                            <img src="{{ asset("/./assets/img/slide03.png") }}" alt="" />
+                            <img src="./assets/img/blog.png" class="active" alt="" />
+                            <img src="./assets/img/slide02.png" alt="" />
+                            <img src="./assets/img/slide03.png" alt="" />
                         </div>
                         <div class="dots">
                             <span class="active" data-index="0"></span>
@@ -136,7 +138,7 @@
                             <p>
                                 『地球品質』～自然の恵みと素材を生かし、時と共に心地良さが深まる暮らし
                             </p>
-                            <a href="{{ url("#") }}">お気に入り追加</a>
+                            <a href="#">お気に入り追加</a>
                         </div>
                         <div class="statusG flex">
                             <div class="status">リフォーム</div>
@@ -161,12 +163,12 @@
                             <p>木の香り漂うウッド調大規模リフォーム</p>
                         </div>
                         <div class="topR_sp flex a-c j-c">
-                            <img src="{{ asset("/./assets/img/bookmark.png") }}" alt="" />
+                            <img src="./assets/img/bookmark.png" alt="" />
                         </div>
                     </div>
                     <div class="cardImgG flex">
-                        <img src="{{ asset("/./assets/img/blog_sp01.png") }}" alt="left" />
-                        <img src="{{ asset("/./assets/img/blog_sp02.png") }}" alt="right" />
+                        <img src="./assets/img/blog_sp01.png" alt="left" />
+                        <img src="./assets/img/blog_sp02.png" alt="right" />
                     </div>
                     <div class="card-content flex col j-b">
                         <div class="statusG flex">
@@ -190,12 +192,12 @@
                             <p>木の香り漂うウッド調大規模リフォーム</p>
                         </div>
                         <div class="topR_sp flex a-c j-c">
-                            <img src="{{ asset("/./assets/img/bookmark.png") }}" alt="" />
+                            <img src="./assets/img/bookmark.png" alt="" />
                         </div>
                     </div>
                     <div class="cardImgG flex">
-                        <img src="{{ asset("/./assets/img/blog_sp01.png") }}" alt="left" />
-                        <img src="{{ asset("/./assets/img/blog_sp02.png") }}" alt="right" />
+                        <img src="./assets/img/blog_sp01.png" alt="left" />
+                        <img src="./assets/img/blog_sp02.png" alt="right" />
                     </div>
                     <div class="card-content flex col j-b">
                         <div class="statusG flex">
@@ -219,12 +221,12 @@
                             <p>木の香り漂うウッド調大規模リフォーム</p>
                         </div>
                         <div class="topR_sp flex a-c j-c">
-                            <img src="{{ asset("/./assets/img/bookmark.png") }}" alt="" />
+                            <img src="./assets/img/bookmark.png" alt="" />
                         </div>
                     </div>
                     <div class="cardImgG flex">
-                        <img src="{{ asset("/./assets/img/blog_sp01.png") }}" alt="left" />
-                        <img src="{{ asset("/./assets/img/blog_sp02.png") }}" alt="right" />
+                        <img src="./assets/img/blog_sp01.png" alt="left" />
+                        <img src="./assets/img/blog_sp02.png" alt="right" />
                     </div>
                     <div class="card-content flex col j-b">
                         <div class="statusG flex">
@@ -262,37 +264,37 @@
             <div class="b_history">
                 <div class="b_historyT flex a-c j-b">
                     <p>閲覧履歴</p>
-                    <a href="{{ url("#") }}">
-                        <img src="{{ asset("/./assets/img/arrow.png") }}" alt="arrow" />
+                    <a href="#">
+                        <img src="./assets/img/arrow.png" alt="arrow" />
                     </a>
                 </div>
                 <div class="h_slide flex">
                     <div class="slideBlock">
-                        <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+                        <img src="./assets/img/h_slide.png" alt="h_slide" />
                         <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
                     </div>
                     <div class="slideBlock">
-                        <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+                        <img src="./assets/img/h_slide.png" alt="h_slide" />
                         <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
                     </div>
                     <div class="slideBlock">
-                        <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+                        <img src="./assets/img/h_slide.png" alt="h_slide" />
                         <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
                     </div>
                     <div class="slideBlock">
-                        <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+                        <img src="./assets/img/h_slide.png" alt="h_slide" />
                         <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
                     </div>
                     <div class="slideBlock">
-                        <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+                        <img src="./assets/img/h_slide.png" alt="h_slide" />
                         <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
                     </div>
                     <div class="slideBlock">
-                        <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+                        <img src="./assets/img/h_slide.png" alt="h_slide" />
                         <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
                     </div>
                     <div class="slideBlock">
-                        <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+                        <img src="./assets/img/h_slide.png" alt="h_slide" />
                         <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
                     </div>
                 </div>
@@ -336,8 +338,10 @@
             </div>
         </div>
     </main>
-    @include('components.footer')
-    <script src="{{ asset("/./assets/js/script.js") }}"></script>
+    {{-- footer begining  --}}
+
+    {{-- footer end  --}}
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

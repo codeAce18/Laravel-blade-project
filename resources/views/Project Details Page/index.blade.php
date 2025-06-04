@@ -10,11 +10,129 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="{{ asset("/./assets/css/style.css") }}" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>施工事例詳細ページ</title>
   </head>
   <body>
-    @include('components.header')
+    {{-- header begining  --}}
+    <header>
+      <div class="menu_part">
+        <div class="topBar">
+          <div class="site_name flex j-c a-c">
+            <p>
+              大阪府 兵庫県 奈良県 で 注文住宅
+              を建てるなら株式会社桝田工務店【イエタッタ】
+            </p>
+          </div>
+          <div class="num_s flex j-c">
+            <div class="container flex a-c j-b">
+              <div class="num flex a-c">
+                <div class="data flex a-b">
+                  <p>住宅会社</p>
+                  <p>352</p>
+                  <p>社</p>
+                </div>
+                <div class="data flex a-b">
+                  <p>施工事例</p>
+                  <p>689</p>
+                  <p>社</p>
+                </div>
+                <div class="data flex a-b">
+                  <p>モデルハウス</p>
+                  <p>112</p>
+                  <p>社</p>
+                </div>
+                <div class="data flex a-b">
+                  <p>土地・建売</p>
+                  <p>156</p>
+                  <p>社</p>
+                </div>
+              </div>
+              <div class="search_c flex a-c">
+                <button class="s_btn" id="reqInfo">まとめて資料請求する</button>
+                <div class="search flex a-c">
+                  <input type="text" placeholder="会社名やキーワードで検索" />
+                  <button class="sBtn" id="sBtn">
+                    <img src="./assets/img/search_icon.png" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menuBar flex col a-c j-c">
+          <div class="container">
+            <div class="t_part flex j-c a-c">
+              <div class="ribbon flex col a-c">
+                <img
+                  src="./assets/img/heart_noti.png"
+                  class="heart"
+                  alt="heart"
+                />
+                <div class="count">0 件</div>
+                <div class="label">お気に入り</div>
+              </div>
+              <div class="ribbonSp">
+                <div class="ribbonSpimg">
+                  <div class="noti">126</div>
+                </div>
+                <p>お気に入り</p>
+              </div>
+              <img src="./assets/img/title.png" class="title" alt="title" />
+              <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <!-- Sliding Menu -->
+              <div class="ham_menu" id="ham_menu">
+                <button class="close-btn" onclick="toggleMenu()">×</button>
+                <div class="menu-items flex col">
+                  <a href="#"> 工務店・ハウスメーカーを探す </a>
+                  <a href="#">施工事例を見る</a>
+                  <a href="#">住宅イベントに行く</a>
+                  <a href="#">モデルハウスを見る</a>
+                  <a href="#"> リノベーション・リフォーム事例を見る </a>
+                  <a href="#">土地・建売・投資用物件を探す</a>
+                  <a href="#">家づくりコラム</a>
+                  <a href="#">家作り基礎講座</a>
+                </div>
+              </div>
+            </div>
+            <div class="menu_list flex j-b">
+              <a href="#" class="menu flex j-c a-c">
+                工務店・ハウス<br />メーカーを探す
+              </a>
+              <a href="#" class="menu flex col j-c a-c">施工事例を<br />見る</a>
+              <a href="#" class="menu flex col j-c a-c"
+                >住宅イベントに<br />行く</a
+              >
+              <a href="#" class="menu flex col j-c a-c"
+                >モデルハウスを<br />見る</a
+              >
+              <a href="#" class="menu flex col j-c a-c">
+                リノベーション・<br />リフォーム事例を見る
+              </a>
+              <a href="#" class="menu flex col j-c a-c"
+                >土地・建売・<br />投資用物件を探す</a
+              >
+              <a href="#" class="menu flex col j-c a-c">家づくりコラム</a>
+              <a href="#" class="menu flex col j-c a-c">家作り基礎講座</a>
+            </div>
+            <div class="ad">
+              <div class="sideBar">新築・注文住宅サイト イエタッタ</div>
+              <img src="./assets/img/ad1.png" class="ad_img" alt="" />
+              <a href="#" class="ad_more flex a-c">
+                <p>詳しくはこちら</p>
+                <img src="./assets/img/ad_more.png" alt="more" />
+              </a>
+            </div>
+            <img src="./assets/img/ad_sp.png" class="adSp" alt="adSp" />
+          </div>
+        </div>
+      </div>
+    </header>
+    {{-- header end  --}}
     <main>
       <div class="container">
         <div class="signCom">
@@ -40,7 +158,7 @@
               <img
                 id="mainImage"
                 class="main-image"
-                src="{{ asset("/./assets/img/slide_main.png") }}"
+                src="./assets/img/slide_main.png"
                 alt="Main Image"
               />
               <div class="arrow left flex a-c j-c" onclick="prevSlide()">
@@ -85,16 +203,16 @@
               <div class="plan">
                 <div class="plan_num">１階</div>
                 <div class="planImg">
-                  <img src="{{ asset("/./assets/img/arrangement.png") }}" alt="planImg" />
+                  <img src="./assets/img/arrangement.png" alt="planImg" />
                 </div>
                 <p>※参考プラン図ですので、実際とは異なります。</p>
                 <img
-                  src="{{ asset("/./assets/img/arrangement 01.png") }}"
+                  src="./assets/img/arrangement 01.png"
                   class="arr_sp"
                   alt="arrangement 01"
                 />
                 <img
-                  src="{{ asset("/./assets/img/arrangement 02.png") }}"
+                  src="./assets/img/arrangement 02.png"
                   class="arr_sp"
                   alt="arrangement 02"
                 />
@@ -106,7 +224,7 @@
                 <div class="plan_num flex a-c j-c">１階</div>
                 <div class="beforeC flex">
                   <div class="before_img">
-                    <img src="{{ asset("/./assets/img/before.png") }}" alt="before" />
+                    <img src="./assets/img/before.png" alt="before" />
                   </div>
                   <div class="beforeC_txt">
                     <p>愛車と海を眺められるLDK</p>
@@ -117,14 +235,14 @@
                   </div>
                 </div>
                 <div class="bArrow flex a-c j-c">
-                  <img src="{{ asset("/./assets/img/below_arrow.png") }}" alt="below_arrow" />
+                  <img src="./assets/img/below_arrow.png" alt="below_arrow" />
                 </div>
               </div>
               <div class="after">
                 <div class="plan_num flex a-c j-c">１階</div>
                 <div class="afterC">
                   <div class="after_img">
-                    <img src="{{ asset("/./assets/img/after.png") }}" alt="after" />
+                    <img src="./assets/img/after.png" alt="after" />
                   </div>
                   <div class="beforeC_txt">
                     <p>愛車と海を眺められるLDK</p>
@@ -139,7 +257,7 @@
             <div class="gallery">
               <p class="galleryT">ギャラリー</p>
               <div class="galleryC top_line">
-                <img src="{{ asset("/./assets/img/gallery01.png") }}" alt="gallery01" />
+                <img src="./assets/img/gallery01.png" alt="gallery01" />
                 <p>愛車と海を眺められるLDK</p>
                 <p>
                   リビングにはガレージを眺められるショーケースを設け、愛車のある暮らしを満喫できる空
@@ -147,15 +265,15 @@
                 </p>
               </div>
               <div class="galleryC">
-                <img src="{{ asset("/./assets/img/gallery02.png") }}" alt="gallery01" />
+                <img src="./assets/img/gallery02.png" alt="gallery01" />
                 <p>バスルームからも海が見えます</p>
               </div>
               <div class="galleryC">
-                <img src="{{ asset("/./assets/img/gallery03.png") }}" alt="gallery01" />
+                <img src="./assets/img/gallery03.png" alt="gallery01" />
                 <p>最高のロケーション</p>
               </div>
               <div class="galleryC">
-                <img src="{{ asset("/./assets/img/gallery04.png") }}" alt="gallery01" />
+                <img src="./assets/img/gallery04.png" alt="gallery01" />
                 <p>シンプルな平屋建て</p>
                 <p>
                   週末を楽しむセカンドハウスとして建てた住宅。山々の緑、海の青など、ロケーションが素晴
@@ -165,19 +283,19 @@
                 </p>
               </div>
               <div class="galleryC">
-                <img src="{{ asset("/./assets/img/gallery05.png") }}" alt="gallery05" />
+                <img src="./assets/img/gallery05.png" alt="gallery05" />
                 <p>セカンドハウスにふさわしいリゾート感</p>
               </div>
               <div class="galleryC">
-                <img src="{{ asset("/./assets/img/gallery06.png") }}" alt="gallery06" />
+                <img src="./assets/img/gallery06.png" alt="gallery06" />
                 <p>海外風のバスルーム</p>
               </div>
               <div class="galleryC">
-                <img src="{{ asset("/./assets/img/gallery07.png") }}" alt="gallery07" />
+                <img src="./assets/img/gallery07.png" alt="gallery07" />
                 <p>LDK</p>
               </div>
               <div class="galleryC">
-                <img src="{{ asset("/./assets/img/gallery08.png") }}" alt="gallery08" />
+                <img src="./assets/img/gallery08.png" alt="gallery08" />
                 <p>ガレージ</p>
               </div>
             </div>
@@ -213,16 +331,16 @@
               </div>
               <div class="btnGroup">
                 <div class="featureBtn mb-20 flex a-c j-c">
-                  <a href="{{ url("#") }}"
+                  <a href="#"
                     >カタログを<br />
                     請求する（無料）</a
                   >
                 </div>
                 <div class="btn_bGroup flex j-b">
                   <div class="bBtn">
-                    <a href="{{ url("#") }}">LINEで質問する</a>
+                    <a href="#">LINEで質問する</a>
                   </div>
-                  <div class="bBtn"><a href="{{ url("#") }}">お気に入りに追加</a></div>
+                  <div class="bBtn"><a href="#">お気に入りに追加</a></div>
                 </div>
               </div>
             </div>
@@ -249,7 +367,7 @@
               <p>
                 8年連続受賞！ハウスオブザイヤーインエナジー（特別優秀賞・省エネ住宅特別優良企業賞W受賞
               </p>
-              <img src="{{ asset("/./assets/img/feature_intro.png") }}" alt="House image" />
+              <img src="./assets/img/feature_intro.png" alt="House image" />
             </div>
 
             <div class="toggle-content-wrapper">
@@ -265,7 +383,7 @@
                     </p>
                   </div>
                   <div class="featureImg">
-                    <img src="{{ asset("/./assets/img/feature.png") }}" alt="House photo" />
+                    <img src="./assets/img/feature.png" alt="House photo" />
                   </div>
                 </div>
                 <div class="featureC_gp flex j-b">
@@ -276,7 +394,7 @@
                     </p>
                   </div>
                   <div class="featureImg">
-                    <img src="{{ asset("/./assets/img/feature.png") }}" alt="House photo" />
+                    <img src="./assets/img/feature.png" alt="House photo" />
                   </div>
                 </div>
                 <div class="featureC_gp flex j-b">
@@ -289,7 +407,7 @@
                     </p>
                   </div>
                   <div class="featureImg">
-                    <img src="{{ asset("/./assets/img/feature.png") }}" alt="House photo" />
+                    <img src="./assets/img/feature.png" alt="House photo" />
                   </div>
                 </div>
               </div>
@@ -307,7 +425,7 @@
               <p>
                 連続受賞中！ハウスオブザイヤーインエナジー（特別優秀賞・省エネ住宅特別優良企業賞W受賞）
               </p>
-              <img src="{{ asset("/./assets/img/feature_intro.png") }}" alt="House image" />
+              <img src="./assets/img/feature_intro.png" alt="House image" />
             </div>
 
             <div class="toggle-content-wrapper">
@@ -323,7 +441,7 @@
                     </p>
                   </div>
                   <div class="featureImg">
-                    <img src="{{ asset("/./assets/img/feature.png") }}" alt="House photo" />
+                    <img src="./assets/img/feature.png" alt="House photo" />
                   </div>
                 </div>
                 <div class="featureC_gp flex j-b">
@@ -334,7 +452,7 @@
                     </p>
                   </div>
                   <div class="featureImg">
-                    <img src="{{ asset("/./assets/img/feature.png") }}" alt="House photo" />
+                    <img src="./assets/img/feature.png" alt="House photo" />
                   </div>
                 </div>
                 <div class="featureC_gp flex j-b">
@@ -347,7 +465,7 @@
                     </p>
                   </div>
                   <div class="featureImg">
-                    <img src="{{ asset("/./assets/img/feature.png") }}" alt="House photo" />
+                    <img src="./assets/img/feature.png" alt="House photo" />
                   </div>
                 </div>
               </div>
@@ -365,7 +483,7 @@
               <p>
                 連続受賞中！ハウスオブザイヤーインエナジー（特別優秀賞・省エネ住宅特別優良企業賞W受賞）
               </p>
-              <img src="{{ asset("/./assets/img/feature_intro.png") }}" alt="House image" />
+              <img src="./assets/img/feature_intro.png" alt="House image" />
             </div>
 
             <div class="toggle-content-wrapper">
@@ -381,7 +499,7 @@
                     </p>
                   </div>
                   <div class="featureImg">
-                    <img src="{{ asset("/./assets/img/feature.png") }}" alt="House photo" />
+                    <img src="./assets/img/feature.png" alt="House photo" />
                   </div>
                 </div>
                 <div class="featureC_gp flex j-b">
@@ -392,7 +510,7 @@
                     </p>
                   </div>
                   <div class="featureImg">
-                    <img src="{{ asset("/./assets/img/feature.png") }}" alt="House photo" />
+                    <img src="./assets/img/feature.png" alt="House photo" />
                   </div>
                 </div>
                 <div class="featureC_gp flex j-b">
@@ -405,7 +523,7 @@
                     </p>
                   </div>
                   <div class="featureImg">
-                    <img src="{{ asset("/./assets/img/feature.png") }}" alt="House photo" />
+                    <img src="./assets/img/feature.png" alt="House photo" />
                   </div>
                 </div>
               </div>
@@ -415,16 +533,16 @@
           </div>
           <div class="btnGroup">
             <div class="featureBtn mb-20 flex a-c j-c">
-              <a href="{{ url("#") }}"
+              <a href="#"
                 >カタログを<br />
                 請求する（無料）</a
               >
             </div>
             <div class="btn_bGroup flex j-b">
               <div class="bBtn">
-                <a href="{{ url("#") }}">LINEで質問する</a>
+                <a href="#">LINEで質問する</a>
               </div>
-              <div class="bBtn"><a href="{{ url("#") }}">お気に入りに追加</a></div>
+              <div class="bBtn"><a href="#">お気に入りに追加</a></div>
             </div>
           </div>
           <div class="btnG flex a-c j-b">
@@ -441,9 +559,9 @@
           <div class="blog flex">
             <div class="imgS">
               <div class="slider">
-                <img src="{{ asset("/./assets/img/blog.png") }}" class="active" alt="" />
-                <img src="{{ asset("/./assets/img/slide02.png") }}" alt="" />
-                <img src="{{ asset("/./assets/img/slide03.png") }}" alt="" />
+                <img src="./assets/img/blog.png" class="active" alt="" />
+                <img src="./assets/img/slide02.png" alt="" />
+                <img src="./assets/img/slide03.png" alt="" />
               </div>
               <div class="dots">
                 <span class="active" data-index="0"></span>
@@ -456,7 +574,7 @@
                 <p>
                   『地球品質』～自然の恵みと素材を生かし、時と共に心地良さが深まる暮らし
                 </p>
-                <a href="{{ url("#") }}">お気に入り追加</a>
+                <a href="#">お気に入り追加</a>
               </div>
               <div class="statusG flex">
                 <div class="status">間取り図あり</div>
@@ -481,9 +599,9 @@
           <div class="blog flex">
             <div class="imgS">
               <div class="slider">
-                <img src="{{ asset("/./assets/img/blog.png") }}" class="active" alt="" />
-                <img src="{{ asset("/./assets/img/slide02.png") }}" alt="" />
-                <img src="{{ asset("/./assets/img/slide03.png") }}" alt="" />
+                <img src="./assets/img/blog.png" class="active" alt="" />
+                <img src="./assets/img/slide02.png" alt="" />
+                <img src="./assets/img/slide03.png" alt="" />
               </div>
               <div class="dots">
                 <span class="active" data-index="0"></span>
@@ -496,7 +614,7 @@
                 <p>
                   『地球品質』～自然の恵みと素材を生かし、時と共に心地良さが深まる暮らし
                 </p>
-                <a href="{{ url("#") }}">お気に入り追加</a>
+                <a href="#">お気に入り追加</a>
               </div>
               <div class="statusG flex">
                 <div class="status">間取り図あり</div>
@@ -521,9 +639,9 @@
           <div class="blog flex">
             <div class="imgS">
               <div class="slider">
-                <img src="{{ asset("/./assets/img/blog.png") }}" class="active" alt="" />
-                <img src="{{ asset("/./assets/img/slide02.png") }}" alt="" />
-                <img src="{{ asset("/./assets/img/slide03.png") }}" alt="" />
+                <img src="./assets/img/blog.png" class="active" alt="" />
+                <img src="./assets/img/slide02.png" alt="" />
+                <img src="./assets/img/slide03.png" alt="" />
               </div>
               <div class="dots">
                 <span class="active" data-index="0"></span>
@@ -536,7 +654,7 @@
                 <p>
                   『地球品質』～自然の恵みと素材を生かし、時と共に心地良さが深まる暮らし
                 </p>
-                <a href="{{ url("#") }}">お気に入り追加</a>
+                <a href="#">お気に入り追加</a>
               </div>
               <div class="statusG flex">
                 <div class="status">間取り図あり</div>
@@ -566,12 +684,12 @@
                 <p>中庭のあるコの字型の平屋『和音の家』</p>
               </div>
               <div class="topR_sp flex a-c j-c">
-                <img src="{{ asset("/./assets/img/bookmark.png") }}" alt="" />
+                <img src="./assets/img/bookmark.png" alt="" />
               </div>
             </div>
             <div class="cardImgG flex">
-              <img src="{{ asset("/./assets/img/blog_sp1.png") }}" alt="left" />
-              <img src="{{ asset("/./assets/img/blog_sp2.png") }}" alt="right" />
+              <img src="./assets/img/blog_sp1.png" alt="left" />
+              <img src="./assets/img/blog_sp2.png" alt="right" />
             </div>
             <div class="card-content flex col j-b">
               <div class="priceG flex a-b">
@@ -597,12 +715,12 @@
                 <p>中庭のあるコの字型の平屋『和音の家』</p>
               </div>
               <div class="topR_sp flex a-c j-c">
-                <img src="{{ asset("/./assets/img/bookmark.png") }}" alt="" />
+                <img src="./assets/img/bookmark.png" alt="" />
               </div>
             </div>
             <div class="cardImgG flex">
-              <img src="{{ asset("/./assets/img/blog_sp1.png") }}" alt="left" />
-              <img src="{{ asset("/./assets/img/blog_sp2.png") }}" alt="right" />
+              <img src="./assets/img/blog_sp1.png" alt="left" />
+              <img src="./assets/img/blog_sp2.png" alt="right" />
             </div>
             <div class="card-content flex col j-b">
               <div class="priceG flex a-b">
@@ -628,12 +746,12 @@
                 <p>中庭のあるコの字型の平屋『和音の家』</p>
               </div>
               <div class="topR_sp flex a-c j-c">
-                <img src="{{ asset("/./assets/img/bookmark.png") }}" alt="" />
+                <img src="./assets/img/bookmark.png" alt="" />
               </div>
             </div>
             <div class="cardImgG flex">
-              <img src="{{ asset("/./assets/img/blog_sp1.png") }}" alt="left" />
-              <img src="{{ asset("/./assets/img/blog_sp2.png") }}" alt="right" />
+              <img src="./assets/img/blog_sp1.png" alt="left" />
+              <img src="./assets/img/blog_sp2.png" alt="right" />
             </div>
             <div class="card-content flex col j-b">
               <div class="priceG flex a-b">
@@ -673,37 +791,37 @@
         <div class="b_history">
           <div class="b_historyT flex a-c j-b">
             <p>閲覧履歴</p>
-            <a href="{{ url("#") }}">
-              <img src="{{ asset("/./assets/img/arrow.png") }}" alt="arrow" />
+            <a href="#">
+              <img src="./assets/img/arrow.png" alt="arrow" />
             </a>
           </div>
           <div class="h_slide flex">
             <div class="slideBlock">
-              <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+              <img src="./assets/img/h_slide.png" alt="h_slide" />
               <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
             </div>
             <div class="slideBlock">
-              <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+              <img src="./assets/img/h_slide.png" alt="h_slide" />
               <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
             </div>
             <div class="slideBlock">
-              <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+              <img src="./assets/img/h_slide.png" alt="h_slide" />
               <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
             </div>
             <div class="slideBlock">
-              <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+              <img src="./assets/img/h_slide.png" alt="h_slide" />
               <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
             </div>
             <div class="slideBlock">
-              <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+              <img src="./assets/img/h_slide.png" alt="h_slide" />
               <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
             </div>
             <div class="slideBlock">
-              <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+              <img src="./assets/img/h_slide.png" alt="h_slide" />
               <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
             </div>
             <div class="slideBlock">
-              <img src="{{ asset("/./assets/img/h_slide.png") }}" alt="h_slide" />
+              <img src="./assets/img/h_slide.png" alt="h_slide" />
               <p>子育て世代に最適～緑を感じる穏やかな街並み…</p>
             </div>
           </div>
@@ -746,7 +864,336 @@
         </div>
       </div>
     </main>
-    @include('components.footer')
-    <script src="{{ asset("/./assets/js/script.js") }}"></script>
+    {{-- footer begining  --}}
+    <footer>
+      <div class="container">
+        <div class="top flex a-c j-b">
+          <img src="./assets/img/title.png" alt="logo" />
+          <div class="snsG flex a-c">
+            <img src="./assets/img/instagram.png" alt="instagram" />
+            <img src="./assets/img/facebook.png" alt="facebook" />
+            <img src="./assets/img/x.png" alt="x" />
+            <img src="./assets/img/youtube.png" alt="youtube" />
+            <img src="./assets/img/line.png" alt="line" />
+            <img src="./assets/img/pinterest.png" alt="piterest" />
+            <img src="./assets/img/tiktok.png" alt="tiktok" />
+          </div>
+        </div>
+        <div class="menuG flex">
+          <div class="sectionG">
+            <div class="section">
+              <p class="sectionT">工務店・ハウスメーカーを探す</p>
+              <div class="sContents">
+                <div class="sContent">
+                  <p class="contentT">- 施工対応エリアから探す</p>
+                  <p>
+                    加賀市 | 小松市 | 能美市・川北町 | 白山 市 | 野々市市 |
+                    金沢市 | かほく市・内灘 町・津幡町 |
+                    羽咋市・宝達志水町・志賀町 | 七尾市・中能登町|
+                    輪島市・穴水町・能 登町 | 珠洲市 | 石川県全域 | 県外
+                  </p>
+                </div>
+                <div class="sContent">
+                  <p class="contentT">- 取扱住宅から探す</p>
+                  <p>注文住宅 | 規格住宅 | 建売住宅</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sectionG">
+            <div class="section">
+              <p class="sectionT">施工事例を見る</p>
+              <div class="sContents">
+                <div class="sContent">
+                  <p class="contentT">- カテゴリーから探す</p>
+                  <p>新築 | リフォーム | リノベーション</p>
+                </div>
+              </div>
+            </div>
+            <div class="section">
+              <p class="sectionT">住宅イベントへ行く</p>
+              <div class="sContents">
+                <div class="sContent">
+                  <p class="contentT">- カテゴリーから探す</p>
+                  <p>
+                    完成見学会 | 構造見学会 | 現場見学会 モデル ハウス |
+                    イベント | セミナー | オンラインイベント | その他
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sectionG">
+            <div class="section">
+              <p class="sectionT">モデルハウスへ行く</p>
+              <div class="sContents">
+                <div class="sContent">
+                  <p class="contentT">- エリアから探す</p>
+                  <p>
+                    加賀市 | 小松市 | 能美市・川北町 | 白山 市 | 野々市市 |
+                    金沢市 | かほく市・内灘 町・津幡町 |
+                    羽咋市・宝達志水町・志賀町 | 七尾市・中能登町 |
+                    輪島市・穴水町・能 登町 | 珠洲市
+                  </p>
+                </div>
+                <div class="sContent">
+                  <p class="contentT">- 属性から探す</p>
+                  <p>販売中 | 販売予定 | 常設展示場 | 常時見 学可</p>
+                </div>
+              </div>
+            </div>
+            <div class="section">
+              <p class="sectionT">シーンから探す</p>
+              <div class="sContents">
+                <div class="sContent">
+                  <p class="contentT">- カテゴリーから探す</p>
+                  <p>
+                    外観 | リビングダイニング | ダイニング キッチン | 洋室 |
+                    和室 | 玄関 | その他屋 内 | その他屋外
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sectionG">
+            <div class="section">
+              <p class="sectionT">土地を探す</p>
+              <div class="sContents">
+                <div class="sContent">
+                  <p class="contentT">- 所在地から探す</p>
+                  <p>
+                    石川県全域 | 加賀市 | 小松市 | 能美市・ 川北町 | 白山市 |
+                    野々市市 | 金沢市 |か ほく市・内灘町・津幡町 |
+                    羽咋市・宝達志 水町・志賀町 | 七尾市・中能登町 | 輪島
+                    市・穴水町・能登町 | 珠洲市
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="section">
+              <p class="sectionT">建売住宅を探す</p>
+              <div class="sContents">
+                <div class="sContent">
+                  <p class="contentT">- 所在地から探す</p>
+                  <p>
+                    石川県全域 | 加賀市 | 小松市 | 能美市・ 川北町 | 白山市 |
+                    野々市市 | 金沢市 | か ほく市・内灘町・津幡町 |
+                    羽咋市・宝達志 水町・志賀町 | 七尾市・中能登町 | 輪島
+                    市・穴水町・能登町 | 珠洲市
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sectionG_sp">
+            <div class="section_sp">
+              <div class="menu-header">
+                <span>工務店・ハウスメーカーを探す</span>
+                <span class="f_arrow">&gt;</span>
+              </div>
+              <div class="menu-content">
+                <div class="sContents">
+                  <div class="sContent">
+                    <p class="contentT">- 施工対応エリアから探す</p>
+                    <p>
+                      加賀市 | 小松市 | 能美市・川北町 | 白山 市 | 野々市市 |
+                      金沢市 | かほく市・内灘 町・津幡町 |
+                      羽咋市・宝達志水町・志賀町 | 七尾市・中能登町|
+                      輪島市・穴水町・能 登町 | 珠洲市 | 石川県全域 | 県外
+                    </p>
+                  </div>
+                  <div class="sContent">
+                    <p class="contentT">- 取扱住宅から探す</p>
+                    <p>注文住宅 | 規格住宅 | 建売住宅</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section_sp">
+              <div class="menu-header">
+                <span>施工事例を見る</span>
+                <span class="f_arrow">&gt;</span>
+              </div>
+              <div class="menu-content">
+                <div class="sContent">
+                  <p class="contentT">- カテゴリーから探す</p>
+                  <p>新築 | リフォーム | リノベーション</p>
+                </div>
+              </div>
+            </div>
+            <div class="section_sp">
+              <div class="menu-header">
+                <span>住宅イベントへ行く</span>
+                <span class="f_arrow">&gt;</span>
+              </div>
+              <div class="menu-content">
+                <div class="sContent">
+                  <p class="contentT">- カテゴリーから探す</p>
+                  <p>
+                    完成見学会 | 構造見学会 | 現場見学会 モデル ハウス |
+                    イベント | セミナー | オンラインイベント | その他
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="section_sp">
+              <div class="menu-header">
+                <span>モデルハウスへ行く</span>
+                <span class="f_arrow">&gt;</span>
+              </div>
+              <div class="menu-content">
+                <div class="sContents">
+                  <div class="sContent">
+                    <p class="contentT">- エリアから探す</p>
+                    <p>
+                      加賀市 | 小松市 | 能美市・川北町 | 白山 市 | 野々市市 |
+                      金沢市 | かほく市・内灘 町・津幡町 |
+                      羽咋市・宝達志水町・志賀町 | 七尾市・中能登町 |
+                      輪島市・穴水町・能 登町 | 珠洲市
+                    </p>
+                  </div>
+                  <div class="sContent">
+                    <p class="contentT">- 属性から探す</p>
+                    <p>販売中 | 販売予定 | 常設展示場 | 常時見 学可</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section_sp">
+              <div class="menu-header">
+                <span>シーンから探す</span>
+                <span class="f_arrow">&gt;</span>
+              </div>
+              <div class="menu-content">
+                <div class="sContents">
+                  <div class="sContent">
+                    <p class="contentT">- カテゴリーから探す</p>
+                    <p>
+                      外観 | リビングダイニング | ダイニング キッチン | 洋室 |
+                      和室 | 玄関 | その他屋 内 | その他屋外
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section_sp">
+              <div class="menu-header">
+                <span>土地を探す</span>
+                <span class="f_arrow">&gt;</span>
+              </div>
+              <div class="menu-content">
+                <div class="sContents">
+                  <div class="sContent">
+                    <p class="contentT">- 所在地から探す</p>
+                    <p>
+                      石川県全域 | 加賀市 | 小松市 | 能美市・ 川北町 | 白山市 |
+                      野々市市 | 金沢市 |か ほく市・内灘町・津幡町 |
+                      羽咋市・宝達志 水町・志賀町 | 七尾市・中能登町 | 輪島
+                      市・穴水町・能登町 | 珠洲市
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section_sp">
+              <div class="menu-header">
+                <span>建売住宅を探す</span>
+                <span class="f_arrow">&gt;</span>
+              </div>
+              <div class="menu-content">
+                <div class="sContents">
+                  <div class="sContent">
+                    <p class="contentT">- 所在地から探す</p>
+                    <p>
+                      石川県全域 | 加賀市 | 小松市 | 能美市・ 川北町 | 白山市 |
+                      野々市市 | 金沢市 | か ほく市・内灘町・津幡町 |
+                      羽咋市・宝達志 水町・志賀町 | 七尾市・中能登町 | 輪島
+                      市・穴水町・能登町 | 珠洲市
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="guide">
+            <div class="guide_list">
+              <p>住まいのコラム</p>
+              <p>石川県の市町村ガイド</p>
+              <p>一括資料請求</p>
+              <p>イエタッタニュース</p>
+              <p>イエタッタの考え</p>
+            </div>
+            <div class="guideListG flex j-b">
+              <div class="guideList">
+                <p>住まいのコラム</p>
+                <p>家づくり基礎講座</p>
+                <p>一括資料請求</p>
+                <p>イエタッタニュース</p>
+                <p>イエタッタの考え</p>
+                <p>登録会社一覧</p>
+              </div>
+              <div class="guideList">
+                <p>サイトマップ</p>
+                <p>利用規約</p>
+                <p>プライバシーポリシー</p>
+                <p>お問い合わせ</p>
+                <p>運営会社</p>
+                <p>ご掲載を希望される方へ</p>
+              </div>
+            </div>
+            <div class="map_lists">
+              <div class="maplist flex a-c">
+                <p>岩手県版</p>
+                <img src="./assets/img/guideMap.png" alt="guideMap_i" />
+              </div>
+              <div class="maplist flex a-c">
+                <p>宮城県版</p>
+                <img src="./assets/img/guideMap.png" alt="guideMap_i" />
+              </div>
+              <div class="maplist flex a-c">
+                <p>山形県版</p>
+                <img src="./assets/img/guideMap.png" alt="guideMap_i" />
+              </div>
+              <div class="maplist flex a-c">
+                <p>福島県版</p>
+                <img src="./assets/img/guideMap.png" alt="guideMap_i" />
+              </div>
+              <div class="maplist flex a-c">
+                <p>茨城県版</p>
+                <img src="./assets/img/guideMap.png" alt="guideMap_i" />
+              </div>
+              <div class="maplist flex a-c">
+                <p>富山県版</p>
+                <img src="./assets/img/guideMap.png" alt="guideMap_i" />
+              </div>
+              <div class="maplist flex a-c">
+                <p>鹿児島県版</p>
+                <img src="./assets/img/guideMap.png" alt="guideMap_i" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom flex a-c">
+        <p>石川県の工務店 ハウスメーカー 情報サイト © IETATTA</p>
+        <div class="btm_list flex a-c">
+          <p>利用規約</p>
+          <p>プライバシーポリシー</p>
+          <p>運営会社</p>
+          <p>お問合せ</p>
+          <p>サイトマップ</p>
+          <p>登録会社一覧</p>
+        </div>
+      </div>
+      <div class="btnG bottom_btn flex a-c j-b">
+        <button>
+          電話で<br />
+          問い合わせる
+        </button>
+        <button>イベント予約する</button>
+      </div>
+    </footer>
+    {{-- footer end  --}}
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
