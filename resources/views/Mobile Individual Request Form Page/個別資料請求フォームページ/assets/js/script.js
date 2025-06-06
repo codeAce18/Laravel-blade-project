@@ -66,3 +66,5 @@ window.addEventListener("resize", () => {
     content.style.maxHeight = content.scrollHeight + "px";
   }
 });
+
+

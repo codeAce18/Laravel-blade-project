@@ -556,7 +556,16 @@ main .bBar {
 .card-content .card-contentT {
   font-size: 24px;
   font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
+
+.card-contentT:hover {
+  color: blue; 
+  text-decoration: underline;
+}
+
+
 .price {
   font-size: 24px;
   color: #e6541c;
@@ -609,6 +618,7 @@ main .tag span {
 }
 main .b_history {
   width: 100%;
+  padding-top: 40px;
 }
 main .b_history .b_historyT {
   font-size: 14px;
@@ -667,6 +677,94 @@ main .topR_sp img {
   width: 17px;
   margin-right: 17px;
 }
+
+.topR_sp {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 0.6; 
+}
+
+.topR_sp:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.topR_sp.bookmarked {
+  opacity: 1;
+  background-color: rgba(103, 130, 174, 0.1); 
+}
+
+.topR_sp.bookmarked img {
+  filter: brightness(1.2) saturate(1.5);
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1C1A10C9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #FAFAF5;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+  width: 80%;
+}
+
+.modal-content p {
+  font-size: 14px;
+  color: #333333;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.modal-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn-confirm, .btn-cancel {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-confirm {
+  background-color: #FF7C00;
+  color: white;
+  border-radius: 100px;
+}
+
+
+
+.btn-cancel {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  color: #333;
+}
+
+.btn-cancel:hover {
+  background-color: #bbb;
+}
+
 main .card_sp {
   background-color: #ffffff;
   padding-bottom: 20px;
@@ -778,16 +876,20 @@ main .homeG p {
   margin-top: 12px;
 }
 
+
+
 .search-container p {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
+  color: #333333;
+  text-align: center;
   margin-bottom: 8px;
 }
 
 .search-box {
   position: relative;
-  border: 2px solid #a6a193;
-  border-radius: 8px;
+  border: 1.2px solid #989483;
+  border-radius: 4px;
   background-color: #fff;
   padding: 10px 12px 10px 40px;
   margin-bottom: 8px;
@@ -821,25 +923,36 @@ main .homeG p {
   align-items: center;
   gap: 4px;
   padding: 6px 12px;
-  border: 2px solid #a6a193;
+  border: 1.2px solid #989483;
   border-radius: 9999px;
   background: #fff;
   font-size: 12px;
   font-weight: 600;
   cursor: pointer;
+  color: #333333;
 }
 
 .sort-options span {
   font-size: 10px;
   cursor: pointer;
+  transition: color 0.2s ease;
 }
+
+.sort-options span:hover {
+  color: #6782AE;
+}
+
 .sort-options {
   font-size: 10px;
+  color: #424031;
 }
 
 .sort-options span.active {
-  font-weight: bold;
-  border-bottom: 2px solid #a6a193;
+  color: #424031;
+  font-weight: 700;
+  font-size: 10px;
+  border-bottom: 2px solid #6782AE;
+  padding-bottom: 4px;
 }
 
 .result-count {
@@ -855,6 +968,10 @@ main .homeG p {
 .filter-container img {
   width: 20px;
 }
+
+
+
+
 
 /* ================== Responsive ============================= */
 @media (max-width: 1024px) {
@@ -1045,6 +1162,15 @@ main .homeG p {
   /* ==== New Page ==== */
   main .btnG {
     padding-inline: 13px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 15px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    margin: 0;
   }
   .search-container {
     padding-inline: 10px;

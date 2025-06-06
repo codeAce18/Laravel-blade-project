@@ -164,13 +164,16 @@
                 <div class="slideBar">
                     <div class="slider-container">
                         <img id="mainImage" class="main-image" src="./assets/img/slide_main.png"
-                            alt="Main Image" />
+                        alt="Main Image" />
+
                         <div class="arrow left flex a-c j-c" onclick="prevSlide()">
-                            &#10094;
+                            <img src="./assets/img/arrowL.svg" alt="left arrow" />
                         </div>
+
                         <div class="arrow right flex a-c j-c" onclick="nextSlide()">
-                            &#10095;
+                            <img src="./assets/img/arrowR.svg" alt="right arrow" />
                         </div>
+
                         <div class="image-count" id="imageCount">1/8</div>
                     </div>
                     <div class="thumbnail-wrapper">
@@ -185,9 +188,12 @@
                     <button>すべてみる ▼</button>
                 </div>
             </div>
+            
             <div class="content">
                 <div class="event_info">
-                    <p class="event_infoT">イベント情報</p>
+                    <div class="event_infoT-wrap">
+                        <p class="event_infoT">イベント情報</p>
+                    </div>
                     <div class="e_dataG">
                         <div class="e_data flex a-c">
                             <p>期間</p>
@@ -329,8 +335,11 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="event_info">
-                    <p class="event_infoT">イベント情報</p>
+                    <div class="event_infoT-wrap">
+                        <p class="event_infoT">イベント情報</p>
+                    </div>
                     <div class="e_dataG">
                         <div class="e_data flex a-c">
                             <p>期間</p>
@@ -375,8 +384,22 @@
                 </div>
             </div>
             <div class="map">
-                <div class="mapT">イベントMAP</div>
-                <img src="./assets/img/map.png" alt="Google Map" />
+                <div class="mapT-wrap">
+                  <div class="mapT">イベントMAP</div>
+                </div>
+              
+                <div class="mapFrameWrap">
+                  <iframe
+                    src="https://maps.google.co.jp/maps?ll=36.387055901033236,136.4519459730164&q=36.387055901033236,136.4519459730164&output=embed&t=m&z=14"
+                    frameborder="0"
+                    scrolling="no"
+                    marginheight="0"
+                    marginwidth="0"
+                    allowfullscreen
+                    loading="lazy"
+                  ></iframe>
+                </div>
+              
                 <div class="mapBtn flex j-c a-c">地図アプリで見る</div>
             </div>
             <div class="blogG">
@@ -514,16 +537,16 @@
             <div class="blogSort flex a-c">
                 <div class="bLeft flex">
                     <button class="sortRect flex a-c j-c">会社情報</button>
-                    <button class="sortRect flex a-c j-c">イベント<br />100件</button>
-                    <button class="sortRect flex a-c j-c">施工事例<br />100件</button>
-                    <button class="sortRect flex a-c j-c">
-                        モデルハウス<br />100件
+                    <button class="sortRect flex-col a-c j-c">イベント<br /><span class="hun">100件</span></button>
+                    <button class="sortRect flex-col a-c j-c">施工事例<br /><span class="hun">100件</span></button>
+                    <button class="sortRect flex-col a-c j-c">
+                        モデルハウス<br /><span class="hun">100件</span>
                     </button>
-                    <button class="sortRect flex a-c j-c">
-                        リフォーム<br />リノベーション<br />100件
+                    <button class="sortRect flex-col a-c j-c">
+                        リフォーム<br />リノベーション<br /><span class="hun">100件</span>
                     </button>
-                    <button class="sortRect flex a-c j-c">土地・建売<br />100件</button>
-                    <button class="sortRect flex a-c j-c">ブログ<br />100件</button>
+                    <button class="sortRect flex-col a-c j-c">土地・建売<br /><span class="hun">100件</span></button>
+                    <button class="sortRect flex-col a-c j-c">ブログ<br /><span  class="hun">100件</span></button>
                     <button class="sortRect flex a-c j-c">公式サイト</button>
                 </div>
             </div>
